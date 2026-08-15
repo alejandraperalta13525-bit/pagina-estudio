@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* ==================== MENÚ ==================== */
+
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #5b4bdb;
+    font-size: 22px;
+}
+
+.navbar ul {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #5b4bdb;
+}
+
+
+/* ==================== INICIO ==================== */
+
+.hero {
+    min-height: 600px;
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 80px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.subtitulo {
+    color: #5b4bdb;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+.hero h2 span {
+    color: #5b4bdb;
+}
+
+.hero p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    font-size: 150px;
+}
+
+
+/* ==================== BOTONES ==================== */
+
+.boton {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #5b4bdb;
+
+    color: white;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.9;
+}
+
+
+/* ==================== SECCIONES ==================== */
+
+.seccion {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+}
+
+.seccion h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    max-width: 700px;
+
+    text-align: center;
+
+    margin: 0 auto 45px;
+
+    color: #666;
+}
+
+
+/* ==================== TARJETAS ==================== */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta h3 {
+    margin: 10px 0;
+}
+
+.icono {
+    font-size: 45px;
+}
+
+
+/* ==================== TÉCNICAS ==================== */
+
+.tecnicas {
+    background: #eef0ff;
+
+    max-width: none;
+}
+
+.tecnicas .tarjetas {
+    max-width: 1140px;
+
+    margin: auto;
+}
+
+.tecnica button {
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #5b4bdb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.tecnica button:hover {
+    opacity: 0.8;
+}
+
+
+/* ==================== CONSEJOS ==================== */
+
+.consejos {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.consejo {
+    background: white;
+
+    margin-bottom: 15px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.consejo span {
+    font-size: 40px;
+}
+
+
+/* ==================== TEST ==================== */
+
+.test {
+    background: white;
+
+    border-radius: 20px;
+
+    margin-bottom: 60px;
+}
+
+.test > p {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.pregunta {
+    max-width: 700px;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background: #f5f7fb;
+
+    border-radius: 12px;
+}
+
+.pregunta h3 {
+    margin-bottom: 15px;
+}
+
+.pregunta label {
+    display: block;
+
+    margin: 12px 0;
+
+    cursor: pointer;
+}
+
+.pregunta input {
+    margin-right: 10px;
+}
+
+.test-btn {
+    display: block;
+
+    margin: 30px auto;
+}
+
+#resultado {
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* ==================== VENTANA ==================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 200;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.modal-contenido {
+    background: white;
+
+    max-width: 500px;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+
+    top: 10px;
+    right: 20px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ==================== PIE DE PÁGINA ==================== */
+
+footer {
+    background: #24233a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+
+/* ==================== CELULARES ==================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        font-size: 100px;
+    }
+}
