@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dificultad: "Alta"
 },
-
+],
         ciencias: [
             {
                 nombre: "Método Feynman",
