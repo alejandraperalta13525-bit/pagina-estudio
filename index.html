@@ -1,453 +1,594 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aprende a Estudiar Mejor</title>
+    <title>Estudia+ | Estudia de forma inteligente</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- ==================== MENÚ ==================== -->
-
+    <!-- BARRA DE NAVEGACIÓN -->
     <header>
         <nav class="navbar">
 
-            <h1>🧠 Aprende a Estudiar</h1>
+            <div class="logo">
+                ✦ Estudia+
+            </div>
 
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#problema">El problema</a></li>
-                <li><a href="#tecnicas">Técnicas</a></li>
-                <li><a href="#consejos">Consejos</a></li>
-                <li><a href="#test">Test</a></li>
-            </ul>
+            <div class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#asistente">Crear mi plan</a>
+                <a href="#tecnicas">Técnicas</a>
+                <a href="#plantillas">Plantillas</a>
+                <a href="#planes">Planes</a>
+            </div>
 
         </nav>
     </header>
 
 
-    <!-- ==================== INICIO ==================== -->
-
+    <!-- INICIO -->
     <section id="inicio" class="hero">
 
-        <div class="hero-text">
+        <div class="hero-content">
 
-            <p class="subtitulo">PROYECTO EDUCATIVO</p>
+            <span class="etiqueta">
+                ✨ ESTUDIA DE FORMA INTELIGENTE
+            </span>
 
-            <h2>
-                ¿Estudias mucho pero
-                <span>aprendes poco?</span>
-            </h2>
+            <h1>
+                Encuentra la técnica de estudio
+                <span>que funciona para ti.</span>
+            </h1>
 
             <p>
-                Descubre cómo las técnicas de estudio pueden ayudarte
-                a organizar mejor tu tiempo, comprender los temas y
-                mejorar tu aprendizaje.
+                Dinos qué quieres estudiar, cuánto tiempo tienes
+                y cuál es tu objetivo. Estudia+ te ayudará a encontrar
+                una estrategia adaptada a ti.
             </p>
 
-            <a href="#tecnicas" class="boton">
-                Descubrir técnicas
+            <a href="#asistente" class="boton">
+                🧠 Crear mi estrategia
             </a>
 
         </div>
 
+    </section>
 
-        <div class="hero-image">
-            🧑‍🎓📚
+
+    <!-- ASISTENTE -->
+    <section id="asistente" class="asistente">
+
+        <div class="titulo-seccion">
+
+            <span>🧠 ASISTENTE DE ESTUDIO</span>
+
+            <h2>
+                Cuéntanos qué necesitas estudiar
+            </h2>
+
+            <p>
+                Responde estas preguntas y encontraremos técnicas
+                que se adapten a tu situación.
+            </p>
+
+        </div>
+
+
+        <div class="formulario">
+
+            <!-- MATERIA -->
+            <div class="campo">
+
+                <label>
+                    📚 ¿Qué materia quieres estudiar?
+                </label>
+
+                <select id="materia">
+
+                    <option value="">
+                        Selecciona una materia
+                    </option>
+
+                    <option value="matematicas">
+                        Matemáticas
+                    </option>
+
+                    <option value="ciencias">
+                        Ciencias
+                    </option>
+
+                    <option value="fisica">
+                        Física
+                    </option>
+
+                    <option value="quimica">
+                        Química
+                    </option>
+
+                    <option value="historia">
+                        Historia
+                    </option>
+
+                    <option value="comunicacion">
+                        Comunicación
+                    </option>
+
+                    <option value="idiomas">
+                        Inglés / Idiomas
+                    </option>
+
+                    <option value="otra">
+                        Otra materia
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TEMA -->
+            <div class="campo">
+
+                <label>
+                    📖 ¿Qué tema vas a estudiar?
+                </label>
+
+                <input
+                    type="text"
+                    id="tema"
+                    placeholder="Ej. Revolución Francesa"
+                >
+
+            </div>
+
+
+            <!-- OBJETIVO -->
+            <div class="campo">
+
+                <label>
+                    🎯 ¿Cuál es tu objetivo?
+                </label>
+
+                <select id="objetivo">
+
+                    <option value="">
+                        Selecciona tu objetivo
+                    </option>
+
+                    <option value="examen">
+                        Prepararme para un examen
+                    </option>
+
+                    <option value="tarea">
+                        Hacer una tarea
+                    </option>
+
+                    <option value="proyecto">
+                        Hacer un proyecto
+                    </option>
+
+                    <option value="exposicion">
+                        Preparar una exposición
+                    </option>
+
+                    <option value="aprender">
+                        Aprender un tema
+                    </option>
+
+                    <option value="memorizar">
+                        Memorizar información
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TIEMPO -->
+            <div class="campo">
+
+                <label>
+                    ⏰ ¿Cuánto tiempo tienes?
+                </label>
+
+                <select id="tiempo">
+
+                    <option value="">
+                        Selecciona tu tiempo
+                    </option>
+
+                    <option value="20">
+                        20 minutos
+                    </option>
+
+                    <option value="30">
+                        30 minutos
+                    </option>
+
+                    <option value="60">
+                        1 hora
+                    </option>
+
+                    <option value="120">
+                        2 horas
+                    </option>
+
+                    <option value="180">
+                        3 horas
+                    </option>
+
+                    <option value="240">
+                        Más de 3 horas
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DIFICULTAD -->
+            <div class="campo">
+
+                <label>
+                    📊 ¿Qué tan difícil te parece?
+                </label>
+
+                <select id="dificultad">
+
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option value="facil">
+                        Fácil
+                    </option>
+
+                    <option value="medio">
+                        Regular
+                    </option>
+
+                    <option value="dificil">
+                        Difícil
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FECHA -->
+            <div class="campo">
+
+                <label>
+                    📅 ¿Cuándo necesitas terminar?
+                </label>
+
+                <input
+                    type="date"
+                    id="fecha"
+                >
+
+            </div>
+
+
+            <button
+                class="boton-generar"
+                onclick="generarPlan()"
+            >
+                ✨ Encontrar mi técnica
+            </button>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+        <div id="resultado" class="resultado">
+
+            <h2>
+                🎉 Tu estrategia de estudio
+            </h2>
+
+            <div id="recomendacion">
+
+            </div>
+
         </div>
 
     </section>
 
 
-    <!-- ==================== PROBLEMA ==================== -->
+    <!-- TÉCNICAS -->
+    <section id="tecnicas" class="seccion">
 
-    <section id="problema" class="seccion">
+        <div class="titulo-seccion">
 
-        <h2>¿Cuál es el problema?</h2>
+            <span>🧠 TÉCNICAS DE ESTUDIO</span>
 
-        <p class="descripcion">
-            Muchos estudiantes estudian sin utilizar una estrategia.
-            Esto puede dificultar la comprensión, la organización
-            y la retención de información.
-        </p>
+            <h2>
+                Una técnica para cada necesidad
+            </h2>
 
-
-        <div class="tarjetas">
-
-            <div class="tarjeta">
-
-                <div class="icono">😵</div>
-
-                <h3>Falta de concentración</h3>
-
-                <p>
-                    Las distracciones pueden dificultar que el estudiante
-                    mantenga la atención durante el estudio.
-                </p>
-
-            </div>
-
-
-            <div class="tarjeta">
-
-                <div class="icono">🧠</div>
-
-                <h3>Olvido de información</h3>
-
-                <p>
-                    Estudiar solamente memorizando puede provocar que
-                    olvidemos rápidamente lo aprendido.
-                </p>
-
-            </div>
-
-
-            <div class="tarjeta">
-
-                <div class="icono">⏰</div>
-
-                <h3>Mala organización</h3>
-
-                <p>
-                    No planificar el tiempo puede provocar acumulación
-                    de tareas y estrés antes de los exámenes.
-                </p>
-
-            </div>
+            <p>
+                No todos aprendemos de la misma manera.
+                Por eso Estudia+ tendrá diferentes técnicas.
+            </p>
 
         </div>
 
-    </section>
 
+        <div class="tarjetas-tecnicas">
 
-    <!-- ==================== TÉCNICAS ==================== -->
-
-    <section id="tecnicas" class="seccion tecnicas">
-
-        <h2>Técnicas de estudio</h2>
-
-        <p class="descripcion">
-            Existen diferentes métodos que pueden ayudarte a estudiar
-            de manera más eficiente.
-        </p>
-
-
-        <div class="tarjetas">
-
-            <!-- POMODORO -->
-
-            <div class="tarjeta tecnica">
-
-                <div class="icono">⏱️</div>
-
-                <h3>Método Pomodoro</h3>
-
+            <article>
+                <div>🧠</div>
+                <h3>Active Recall</h3>
                 <p>
-                    Estudia durante 25 minutos y luego toma un descanso
-                    de 5 minutos.
+                    Intenta recordar la información sin mirar
+                    tus apuntes.
                 </p>
-
-                <button onclick="mostrarInfo('pomodoro')">
-                    Ver más
-                </button>
-
-            </div>
+            </article>
 
 
-            <!-- MAPAS MENTALES -->
+            <article>
+                <div>🔄</div>
+                <h3>Repetición espaciada</h3>
+                <p>
+                    Repasa la información en diferentes momentos
+                    para fortalecer la memoria.
+                </p>
+            </article>
 
-            <div class="tarjeta tecnica">
 
-                <div class="icono">🗺️</div>
+            <article>
+                <div>💡</div>
+                <h3>Método Feynman</h3>
+                <p>
+                    Explica un concepto con palabras sencillas
+                    para comprobar si lo entiendes.
+                </p>
+            </article>
 
+
+            <article>
+                <div>🃏</div>
+                <h3>Flashcards</h3>
+                <p>
+                    Estudia mediante preguntas y respuestas.
+                </p>
+            </article>
+
+
+            <article>
+                <div>🗺️</div>
                 <h3>Mapas mentales</h3>
-
                 <p>
-                    Organiza las ideas principales mediante palabras,
-                    conceptos y conexiones.
+                    Organiza la información visualmente.
                 </p>
-
-                <button onclick="mostrarInfo('mapa')">
-                    Ver más
-                </button>
-
-            </div>
+            </article>
 
 
-            <!-- RESÚMENES -->
-
-            <div class="tarjeta tecnica">
-
-                <div class="icono">📝</div>
-
-                <h3>Resúmenes</h3>
-
+            <article>
+                <div>🍅</div>
+                <h3>Pomodoro</h3>
                 <p>
-                    Resume la información utilizando tus propias palabras
-                    para comprender mejor el contenido.
+                    Divide tu tiempo en sesiones de concentración
+                    y descansos.
                 </p>
-
-                <button onclick="mostrarInfo('resumen')">
-                    Ver más
-                </button>
-
-            </div>
+            </article>
 
 
-            <!-- REPASO ESPACIADO -->
-
-            <div class="tarjeta tecnica">
-
-                <div class="icono">🔄</div>
-
-                <h3>Repaso espaciado</h3>
-
+            <article>
+                <div>📝</div>
+                <h3>Método Cornell</h3>
                 <p>
-                    Repasa la información varias veces dejando intervalos
-                    de tiempo entre cada sesión.
+                    Organiza tus apuntes para estudiar mejor.
                 </p>
+            </article>
 
-                <button onclick="mostrarInfo('repaso')">
-                    Ver más
-                </button>
 
-            </div>
+            <article>
+                <div>🎯</div>
+                <h3>Simulacros</h3>
+                <p>
+                    Practica como si estuvieras realizando
+                    el examen real.
+                </p>
+            </article>
 
         </div>
 
     </section>
 
 
-    <!-- ==================== CONSEJOS ==================== -->
+    <!-- PLANTILLAS -->
+    <section id="plantillas" class="seccion">
 
-    <section id="consejos" class="seccion">
+        <div class="titulo-seccion">
 
-        <h2>Consejos para estudiar mejor</h2>
+            <span>📄 PLANTILLAS</span>
 
+            <h2>
+                Herramientas para organizar tus estudios
+            </h2>
 
-        <div class="consejos">
-
-            <div class="consejo">
-
-                <span>📅</span>
-
-                <div>
-
-                    <h3>Organiza tu tiempo</h3>
-
-                    <p>
-                        Crea un horario de estudio y establece objetivos
-                        para cada sesión.
-                    </p>
-
-                </div>
-
-            </div>
+        </div>
 
 
-            <div class="consejo">
+        <div class="plantillas">
 
-                <span>📵</span>
-
-                <div>
-
-                    <h3>Evita distracciones</h3>
-
-                    <p>
-                        Aleja el celular y otros elementos que puedan
-                        interrumpir tu concentración.
-                    </p>
-
-                </div>
-
-            </div>
+            <article>
+                <div>🗓️</div>
+                <h3>Planificador semanal</h3>
+                <p>
+                    Organiza tus sesiones de estudio.
+                </p>
+                <button>
+                    Usar plantilla
+                </button>
+            </article>
 
 
-            <div class="consejo">
-
-                <span>💧</span>
-
-                <div>
-
-                    <h3>Cuida tus descansos</h3>
-
-                    <p>
-                        Realiza pausas para descansar y recuperar energía.
-                    </p>
-
-                </div>
-
-            </div>
+            <article>
+                <div>📝</div>
+                <h3>Plantilla de resumen</h3>
+                <p>
+                    Organiza los conceptos más importantes.
+                </p>
+                <button>
+                    Usar plantilla
+                </button>
+            </article>
 
 
-            <div class="consejo">
-
-                <span>🎯</span>
-
-                <div>
-
-                    <h3>Establece objetivos</h3>
-
-                    <p>
-                        Define qué quieres aprender antes de comenzar
-                        a estudiar.
-                    </p>
-
-                </div>
-
-            </div>
+            <article>
+                <div>🃏</div>
+                <h3>Flashcards</h3>
+                <p>
+                    Crea tarjetas para practicar.
+                </p>
+                <button>
+                    Usar plantilla
+                </button>
+            </article>
 
         </div>
 
     </section>
 
 
-    <!-- ==================== TEST ==================== -->
+    <!-- PLANES PREMIUM -->
+    <section id="planes" class="seccion planes">
 
-    <section id="test" class="seccion test">
+        <div class="titulo-seccion">
 
-        <h2>🎯 Descubre cómo estudias</h2>
+            <span>💎 PLANES</span>
 
-        <p>
-            Responde estas preguntas y descubre qué técnica podría
-            ayudarte.
-        </p>
+            <h2>
+                Elige la experiencia que necesitas
+            </h2>
 
-
-        <!-- PREGUNTA 1 -->
-
-        <div class="pregunta">
-
-            <h3>
-                1. ¿Qué haces normalmente cuando tienes un examen?
-            </h3>
-
-            <label>
-                <input type="radio" name="p1" value="1">
-                Estudio todo el día anterior.
-            </label>
-
-            <label>
-                <input type="radio" name="p1" value="2">
-                Hago pequeños repasos durante varios días.
-            </label>
-
-            <label>
-                <input type="radio" name="p1" value="3">
-                Hago resúmenes y esquemas.
-            </label>
+            <p>
+                Comienza gratis y desbloquea más herramientas
+                cuando las necesites.
+            </p>
 
         </div>
 
 
-        <!-- PREGUNTA 2 -->
+        <div class="planes-grid">
 
-        <div class="pregunta">
+            <!-- GRATIS -->
+            <article class="plan">
 
-            <h3>
-                2. ¿Qué problema tienes cuando estudias?
-            </h3>
+                <h3>Gratis</h3>
 
-            <label>
-                <input type="radio" name="p2" value="1">
-                Me cuesta concentrarme.
-            </label>
+                <div class="precio">
+                    S/0
+                    <small>/mes</small>
+                </div>
 
-            <label>
-                <input type="radio" name="p2" value="2">
-                Olvido rápidamente lo que estudié.
-            </label>
+                <ul>
+                    <li>✓ Técnicas básicas</li>
+                    <li>✓ Asistente de estudio</li>
+                    <li>✓ Pomodoro</li>
+                    <li>✓ Plantillas básicas</li>
+                </ul>
 
-            <label>
-                <input type="radio" name="p2" value="3">
-                Me cuesta organizar la información.
-            </label>
+                <button>
+                    Comenzar gratis
+                </button>
+
+            </article>
+
+
+            <!-- ESTUDIANTE -->
+            <article class="plan destacado">
+
+                <span class="popular">
+                    MÁS ELEGIDO
+                </span>
+
+                <h3>Estudiante</h3>
+
+                <div class="precio">
+                    S/30
+                    <small>/mes</small>
+                </div>
+
+                <ul>
+                    <li>✓ Todo el plan Gratis</li>
+                    <li>✓ Plan personalizado</li>
+                    <li>✓ Flashcards</li>
+                    <li>✓ Banco de preguntas</li>
+                    <li>✓ Técnicas de memorización</li>
+                    <li>✓ 15 plantillas</li>
+                </ul>
+
+                <button>
+                    Elegir plan
+                </button>
+
+            </article>
+
+
+            <!-- PREMIUM -->
+            <article class="plan premium">
+
+                <span class="corona">
+                    👑
+                </span>
+
+                <h3>Premium</h3>
+
+                <div class="precio">
+                    S/40
+                    <small>/mes</small>
+                </div>
+
+                <ul>
+                    <li>✓ Todo el plan Estudiante</li>
+                    <li>✓ Planes personalizados ilimitados</li>
+                    <li>✓ Banco completo de preguntas</li>
+                    <li>✓ Estadísticas</li>
+                    <li>✓ Recomendaciones personalizadas</li>
+                    <li>✓ Material nuevo cada semana</li>
+                </ul>
+
+                <button>
+                    Elegir Premium
+                </button>
+
+            </article>
 
         </div>
-
-
-        <!-- PREGUNTA 3 -->
-
-        <div class="pregunta">
-
-            <h3>
-                3. ¿Cómo prefieres aprender?
-            </h3>
-
-            <label>
-                <input type="radio" name="p3" value="1">
-                Estudiando en sesiones cortas.
-            </label>
-
-            <label>
-                <input type="radio" name="p3" value="2">
-                Repasando varias veces.
-            </label>
-
-            <label>
-                <input type="radio" name="p3" value="3">
-                Utilizando esquemas y mapas.
-            </label>
-
-        </div>
-
-
-        <button class="boton test-btn" onclick="calcularResultado()">
-            Ver mi resultado
-        </button>
-
-
-        <div id="resultado"></div>
 
     </section>
 
 
-    <!-- ==================== PIE DE PÁGINA ==================== -->
-
+    <!-- PIE DE PÁGINA -->
     <footer>
 
-        <h3>🧠 Aprende a Estudiar</h3>
+        <h2>
+            ✦ Estudia+
+        </h2>
 
         <p>
-            Proyecto educativo sobre la importancia de las técnicas
-            de estudio.
+            Más que estudiar más, estudia mejor.
         </p>
 
-        <p>
-            © 2026 - Proyecto escolar
-        </p>
+        <small>
+            Proyecto emprendedor educativo © 2026
+        </small>
 
     </footer>
 
 
-    <!-- ==================== VENTANA INFORMACIÓN ==================== -->
-
-    <div id="modal" class="modal">
-
-        <div class="modal-contenido">
-
-            <span class="cerrar" onclick="cerrarModal()">
-                &times;
-            </span>
-
-            <h2 id="modal-titulo"></h2>
-
-            <p id="modal-texto"></p>
-
-        </div>
-
-    </div>
-
-
     <!-- JAVASCRIPT -->
-
     <script src="script.js"></script>
 
 </body>
-
 </html>
