@@ -610,3 +610,63 @@ footer small {
     }
 
 }
+/* ==========================================
+   ASISTENTE - PREGUNTAS PASO A PASO
+   ========================================== */
+
+.pregunta {
+    display: none;
+}
+
+.pregunta.activa {
+    display: block;
+}
+
+.controles-preguntas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.boton-generar,
+.boton-secundario {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.boton-secundario {
+    background: #eeeeee;
+}
+
+.boton-generar {
+    background: #6c63ff;
+    color: white;
+}
+
+.boton-generar:hover,
+.boton-secundario:hover {
+    transform: translateY(-2px);
+}
+
+.resultado {
+    display: none;
+    margin-top: 40px;
+}
+
+.resultado.activo {
+    display: block;
+}
+
+.numero-pregunta {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.7;
+}
