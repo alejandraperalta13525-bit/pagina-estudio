@@ -409,20 +409,61 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // Poco tiempo
-            if (tiempo === "20" || tiempo === "30") {
+           // Adaptar las técnicas según el tiempo disponible
 
-                if (
-                    tecnica.nombre === "Recuperación activa" ||
-                    tecnica.nombre === "Práctica activa" ||
-                    tecnica.nombre === "Flashcards"
-                ) {
-                    puntuacion += 2;
-                }
+if (tiempo === "20" || tiempo === "30") {
 
-            }
+    // Para sesiones cortas: técnicas rápidas y directas
+    if (
+        tecnica.nombre === "Recuperación activa" ||
+        tecnica.nombre === "Práctica activa" ||
+        tecnica.nombre === "Flashcards"
+    ) {
+        puntuacion += 4;
+    }
 
+    if (
+        tecnica.nombre === "Método Feynman" ||
+        tecnica.nombre === "Práctica intercalada"
+    ) {
+        puntuacion -= 1;
+    }
 
+}
+
+if (tiempo === "60") {
+
+    // Para una hora: equilibrio entre práctica y comprensión
+    if (
+        tecnica.nombre === "Recuperación activa" ||
+        tecnica.nombre === "Práctica activa" ||
+        tecnica.nombre === "Método Feynman" ||
+        tecnica.nombre === "Mapas conceptuales"
+    ) {
+        puntuacion += 3;
+    }
+
+}
+
+if (tiempo === "120") {
+
+    // Para sesiones largas: técnicas que permiten profundizar
+    if (
+        tecnica.nombre === "Método Feynman" ||
+        tecnica.nombre === "Mapas conceptuales" ||
+        tecnica.nombre === "Práctica intercalada"
+    ) {
+        puntuacion += 5;
+    }
+
+    if (
+        tecnica.nombre === "Recuperación activa" ||
+        tecnica.nombre === "Práctica activa"
+    ) {
+        puntuacion += 2;
+    }
+
+}
             return {
                 ...tecnica,
                 puntuacion: puntuacion
