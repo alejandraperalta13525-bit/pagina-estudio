@@ -1,24 +1,30 @@
 // ==========================================
-// ESTUDIA+ | ASISTENTE INTELIGENTE
+// ESTUDIA+
+// ASISTENTE PERSONALIZADO DE ESTUDIO
 // ==========================================
 
-// Técnicas disponibles
+
+// ==========================================
+// BASE DE DATOS DE TÉCNICAS
+// ==========================================
+
 const tecnicas = {
+
     matematicas: [
         {
             nombre: "Práctica activa",
             icono: "🧮",
-            descripcion: "Resuelve ejercicios en lugar de limitarte a leer la teoría."
+            descripcion: "Resuelve ejercicios sin mirar primero la solución."
         },
         {
-            nombre: "Repetición espaciada",
-            icono: "🔄",
-            descripcion: "Repasa las fórmulas y procedimientos en diferentes momentos."
+            nombre: "Resolución paso a paso",
+            icono: "📝",
+            descripcion: "Divide cada problema en pasos pequeños y comprueba cada procedimiento."
         },
         {
-            nombre: "Método Feynman",
-            icono: "💡",
-            descripcion: "Explica el problema con tus propias palabras para detectar qué no entiendes."
+            nombre: "Recuperación activa",
+            icono: "🧠",
+            descripcion: "Intenta recordar fórmulas y procedimientos antes de consultar tus apuntes."
         }
     ],
 
@@ -26,17 +32,17 @@ const tecnicas = {
         {
             nombre: "Mapas conceptuales",
             icono: "🧠",
-            descripcion: "Relaciona conceptos para comprender mejor los temas."
+            descripcion: "Relaciona conceptos para comprender cómo se conecta la información."
         },
         {
             nombre: "Método Feynman",
             icono: "💡",
-            descripcion: "Explica el tema como si se lo enseñaras a otra persona."
+            descripcion: "Explica el concepto con palabras sencillas como si enseñaras a otra persona."
         },
         {
             nombre: "Preguntas activas",
             icono: "❓",
-            descripcion: "Convierte el contenido en preguntas y trata de responderlas sin mirar tus apuntes."
+            descripcion: "Convierte el contenido en preguntas y responde sin mirar tus apuntes."
         }
     ],
 
@@ -44,17 +50,17 @@ const tecnicas = {
         {
             nombre: "Línea de tiempo",
             icono: "📅",
-            descripcion: "Organiza acontecimientos cronológicamente para comprender la evolución de los hechos."
+            descripcion: "Ordena acontecimientos para comprender cuándo y cómo ocurrieron."
         },
         {
             nombre: "Mapas mentales",
-            icono: "🧠",
-            descripcion: "Relaciona fechas, personajes, acontecimientos y conceptos."
+            icono: "🗺️",
+            descripcion: "Relaciona personajes, fechas, causas y consecuencias."
         },
         {
             nombre: "Flashcards",
             icono: "🃏",
-            descripcion: "Utiliza tarjetas para recordar fechas, personajes y acontecimientos importantes."
+            descripcion: "Practica fechas, nombres y conceptos mediante tarjetas."
         }
     ],
 
@@ -62,165 +68,287 @@ const tecnicas = {
         {
             nombre: "Repetición espaciada",
             icono: "🔄",
-            descripcion: "Repasa vocabulario nuevo en intervalos cada vez mayores."
+            descripcion: "Repasa vocabulario en diferentes momentos para mejorar la memoria."
         },
         {
             nombre: "Flashcards",
             icono: "🃏",
-            descripcion: "Crea tarjetas con palabras, traducciones y ejemplos."
+            descripcion: "Practica palabras y expresiones mediante tarjetas."
         },
         {
             nombre: "Práctica activa",
             icono: "🗣️",
-            descripcion: "Utiliza las palabras y estructuras nuevas en frases propias."
+            descripcion: "Utiliza el vocabulario creando tus propias frases."
         }
     ],
 
-    lectura: [
-        {
-            nombre: "SQ3R",
-            icono: "📖",
-            descripcion: "Explora, pregunta, lee, recuerda y revisa el contenido."
-        },
+    comunicacion: [
         {
             nombre: "Método Feynman",
             icono: "💡",
-            descripcion: "Explica lo leído con palabras sencillas para comprobar tu comprensión."
+            descripcion: "Explica el contenido con tus propias palabras."
         },
         {
-            nombre: "Subrayado inteligente",
-            icono: "✏️",
-            descripcion: "Identifica únicamente las ideas realmente importantes."
+            nombre: "Resumen activo",
+            icono: "📝",
+            descripcion: "Resume las ideas principales sin copiar literalmente el texto."
+        },
+        {
+            nombre: "Preguntas de comprensión",
+            icono: "❓",
+            descripcion: "Crea preguntas sobre el texto y responde sin consultarlo."
         }
     ],
 
     general: [
         {
+            nombre: "Recuperación activa",
+            icono: "🧠",
+            descripcion: "Intenta recordar la información antes de volver a leerla."
+        },
+        {
             nombre: "Pomodoro",
             icono: "🍅",
-            descripcion: "Estudia durante periodos de concentración y realiza descansos cortos."
+            descripcion: "Divide el estudio en periodos de concentración y descansos."
         },
         {
             nombre: "Repetición espaciada",
             icono: "🔄",
             descripcion: "Distribuye los repasos a lo largo del tiempo."
-        },
-        {
-            nombre: "Método Feynman",
-            icono: "💡",
-            descripcion: "Explica el tema con palabras sencillas para comprobar que realmente lo entiendes."
         }
     ]
+
 };
 
 
 // ==========================================
-// RECOMENDACIÓN SEGÚN LA MATERIA
+// OBTENER TÉCNICAS SEGÚN LA MATERIA
 // ==========================================
 
-function obtenerCategoria(materia) {
+function obtenerTecnicasMateria(materia) {
 
-    materia = materia.toLowerCase();
-
-    if (
-        materia.includes("mate") ||
-        materia.includes("álgebra") ||
-        materia.includes("algebra") ||
-        materia.includes("cálculo") ||
-        materia.includes("calculo") ||
-        materia.includes("física") ||
-        materia.includes("fisica")
-    ) {
-        return "matematicas";
+    if (materia === "matematicas") {
+        return tecnicas.matematicas;
     }
 
-    if (
-        materia.includes("química") ||
-        materia.includes("quimica") ||
-        materia.includes("biología") ||
-        materia.includes("biologia") ||
-        materia.includes("ciencia")
-    ) {
-        return "ciencias";
+    if (materia === "ciencias") {
+        return tecnicas.ciencias;
     }
 
-    if (
-        materia.includes("historia") ||
-        materia.includes("geografía") ||
-        materia.includes("geografia") ||
-        materia.includes("social")
-    ) {
-        return "historia";
+    if (materia === "historia") {
+        return tecnicas.historia;
     }
 
-    if (
-        materia.includes("inglés") ||
-        materia.includes("ingles") ||
-        materia.includes("idioma") ||
-        materia.includes("francés") ||
-        materia.includes("frances")
-    ) {
-        return "idiomas";
+    if (materia === "idiomas") {
+        return tecnicas.idiomas;
     }
 
-    if (
-        materia.includes("literatura") ||
-        materia.includes("lengua") ||
-        materia.includes("lectura") ||
-        materia.includes("comunicación") ||
-        materia.includes("comunicacion")
-    ) {
-        return "lectura";
+    if (materia === "comunicacion") {
+        return tecnicas.comunicacion;
     }
 
-    return "general";
+    return tecnicas.general;
 }
 
 
 // ==========================================
-// CREAR PLAN
+// ANALIZAR LAS RESPUESTAS
 // ==========================================
 
-function crearPlan() {
+function analizarRespuestas() {
 
-    const materiaInput = document.getElementById("materia");
-    const tiempoInput = document.getElementById("tiempo");
-    const objetivoInput = document.getElementById("objetivo");
+    const materia = document.getElementById("materia").value;
+    const tema = document.getElementById("tema").value.trim();
+    const objetivo = document.getElementById("objetivo").value;
+    const tiempo = document.getElementById("tiempo").value;
+    const dificultad = document.getElementById("dificultad").value;
 
-    if (!materiaInput || !tiempoInput || !objetivoInput) {
-        console.log("Faltan campos del formulario.");
+    // Comprobar información
+
+    if (
+        materia === "" ||
+        tema === "" ||
+        objetivo === "" ||
+        tiempo === "" ||
+        dificultad === ""
+    ) {
+
+        alert(
+            "📝 Completa todas las preguntas para que Estudia+ pueda crear tu estrategia."
+        );
+
         return;
     }
 
-    const materia = materiaInput.value.trim();
-    const tiempo = Number(tiempoInput.value);
-    const objetivo = objetivoInput.value.trim();
 
-    if (!materia || !tiempo || !objetivo) {
-        alert("Completa todos los campos para crear tu plan de estudio.");
-        return;
+    // Obtener técnicas
+
+    let recomendaciones = obtenerTecnicasMateria(materia);
+
+
+    // ==========================================
+    // ADAPTAR SEGÚN EL OBJETIVO
+    // ==========================================
+
+    if (objetivo === "examen") {
+
+        recomendaciones = [
+            {
+                nombre: "Preguntas de práctica",
+                icono: "📝",
+                descripcion:
+                    "Practica preguntas similares a las que podrías encontrar en tu examen."
+            },
+            ...recomendaciones
+        ];
     }
 
-    const categoria = obtenerCategoria(materia);
-    const listaTecnicas = tecnicas[categoria];
 
-    let cantidadTecnicas = 1;
+    if (objetivo === "memorizar") {
 
-    if (tiempo >= 60) {
-        cantidadTecnicas = 2;
+        recomendaciones = [
+            {
+                nombre: "Repetición espaciada",
+                icono: "🔄",
+                descripcion:
+                    "Programa varios repasos para fortalecer la memoria."
+            },
+            {
+                nombre: "Flashcards",
+                icono: "🃏",
+                descripcion:
+                    "Convierte los conceptos importantes en preguntas y respuestas."
+            },
+            ...recomendaciones
+        ];
     }
 
-    if (tiempo >= 120) {
-        cantidadTecnicas = 3;
+
+    if (objetivo === "proyecto") {
+
+        recomendaciones = [
+            {
+                nombre: "Mapa mental",
+                icono: "🗺️",
+                descripcion:
+                    "Organiza las ideas principales antes de comenzar tu proyecto."
+            },
+            ...recomendaciones
+        ];
     }
 
-    const tecnicasElegidas = listaTecnicas.slice(0, cantidadTecnicas);
+
+    // ==========================================
+    // ADAPTAR SEGÚN DIFICULTAD
+    // ==========================================
+
+    if (dificultad === "dificil") {
+
+        recomendaciones.push({
+            nombre: "Método Feynman",
+            icono: "💡",
+            descripcion:
+                "Explica el tema con palabras sencillas para descubrir qué partes todavía no comprendes."
+        });
+    }
+
+
+    // ==========================================
+    // ELIMINAR REPETIDOS
+    // ==========================================
+
+    recomendaciones = recomendaciones.filter(
+        (tecnica, index, self) =>
+            index === self.findIndex(
+                t => t.nombre === tecnica.nombre
+            )
+    );
+
+
+    // ==========================================
+    // CREAR PLAN SEGÚN EL TIEMPO
+    // ==========================================
+
+    let plan = [];
+
+
+    if (tiempo === "20") {
+
+        plan = [
+            "🎯 3 minutos → preparar el material",
+            "🧠 10 minutos → estudiar activamente",
+            "📝 5 minutos → comprobar lo aprendido",
+            "🔄 2 minutos → repaso final"
+        ];
+
+    }
+
+
+    else if (tiempo === "30") {
+
+        plan = [
+            "🎯 5 minutos → revisar conceptos principales",
+            "🧠 15 minutos → aplicar la técnica recomendada",
+            "📝 7 minutos → practicar sin mirar apuntes",
+            "🔄 3 minutos → repaso final"
+        ];
+
+    }
+
+
+    else if (tiempo === "60") {
+
+        plan = [
+            "🎯 5 minutos → preparar el estudio",
+            "🧠 25 minutos → primera sesión",
+            "☕ 5 minutos → descanso",
+            "📝 20 minutos → práctica",
+            "🔄 5 minutos → repaso"
+        ];
+
+    }
+
+
+    else if (tiempo === "120") {
+
+        plan = [
+            "🎯 10 minutos → organizar el contenido",
+            "🧠 25 minutos → primera sesión",
+            "☕ 5 minutos → descanso",
+            "📝 25 minutos → práctica",
+            "☕ 10 minutos → descanso",
+            "🧠 25 minutos → segunda sesión",
+            "🔄 20 minutos → repaso"
+        ];
+
+    }
+
+
+    else {
+
+        plan = [
+            "🎯 Organiza primero los temas prioritarios",
+            "🧠 Realiza sesiones de 25 minutos",
+            "☕ Descansa 5 minutos entre sesiones",
+            "📝 Realiza ejercicios o preguntas",
+            "🔄 Termina con un repaso"
+        ];
+
+    }
+
+
+    // ==========================================
+    // MOSTRAR RESULTADO
+    // ==========================================
 
     mostrarResultado(
         materia,
-        tiempo,
+        tema,
         objetivo,
-        tecnicasElegidas
+        tiempo,
+        dificultad,
+        recomendaciones,
+        plan
     );
 }
 
@@ -231,154 +359,247 @@ function crearPlan() {
 
 function mostrarResultado(
     materia,
-    tiempo,
+    tema,
     objetivo,
-    tecnicasElegidas
+    tiempo,
+    dificultad,
+    recomendaciones,
+    plan
 ) {
 
     const resultado = document.getElementById("resultado");
+    const recomendacion = document.getElementById("recomendacion");
 
-    if (!resultado) {
+
+    if (!resultado || !recomendacion) {
+
+        console.error(
+            "No se encontró el área de resultados."
+        );
+
         return;
     }
 
-    let tiempoEstudio = tiempo;
 
-    let bloques = [];
+    // ==========================================
+    // NOMBRE DE MATERIA
+    // ==========================================
 
-    if (tiempo <= 30) {
+    const nombresMaterias = {
 
-        bloques = [
-            `🎯 ${tiempo} minutos de concentración total`,
-            "📝 5 minutos para recordar lo aprendido",
-            "🔄 5 minutos de repaso"
-        ];
+        matematicas: "Matemáticas",
+        ciencias: "Ciencias",
+        historia: "Historia",
+        idiomas: "Idiomas",
+        comunicacion: "Comunicación",
+        otra: "Otra materia"
 
-    } else if (tiempo <= 60) {
+    };
 
-        bloques = [
-            "🍅 25 minutos de estudio",
-            "☕ 5 minutos de descanso",
-            "🍅 25 minutos de estudio",
-            "📝 5 minutos de repaso"
-        ];
 
-    } else {
+    const nombreMateria =
+        nombresMaterias[materia] || materia;
 
-        const sesiones = Math.floor(tiempo / 30);
 
-        for (let i = 0; i < sesiones; i++) {
-
-            if (i % 2 === 0) {
-                bloques.push("🍅 25 minutos de concentración");
-            } else {
-                bloques.push("☕ 5 minutos de descanso");
-            }
-
-        }
-
-        bloques.push("📝 10 minutos de repaso final");
-    }
-
+    // ==========================================
+    // CREAR TARJETAS DE TÉCNICAS
+    // ==========================================
 
     let tecnicasHTML = "";
 
-    tecnicasElegidas.forEach(tecnica => {
 
-        tecnicasHTML += `
+    recomendaciones.slice(0, 4).forEach(
+        function(tecnica) {
+
+            tecnicasHTML += `
+
+                <div style="
+                    background:white;
+                    padding:20px;
+                    margin:12px 0;
+                    border-radius:16px;
+                    border:1px solid #e5e8ef;
+                ">
+
+                    <div style="
+                        font-size:30px;
+                        margin-bottom:8px;
+                    ">
+                        ${tecnica.icono}
+                    </div>
+
+                    <h3>
+                        ${tecnica.nombre}
+                    </h3>
+
+                    <p>
+                        ${tecnica.descripcion}
+                    </p>
+
+                </div>
+
+            `;
+        }
+    );
+
+
+    // ==========================================
+    // CREAR PLAN
+    // ==========================================
+
+    let planHTML = "";
+
+
+    plan.forEach(
+        function(paso) {
+
+            planHTML += `
+
+                <div style="
+                    padding:10px 0;
+                ">
+                    ${paso}
+                </div>
+
+            `;
+
+        }
+    );
+
+
+    // ==========================================
+    // RESULTADO FINAL
+    // ==========================================
+
+    recomendacion.innerHTML = `
+
+        <div>
+
+            <p>
+                <strong>📚 Materia:</strong>
+                ${nombreMateria}
+            </p>
+
+            <p>
+                <strong>📖 Tema:</strong>
+                ${tema}
+            </p>
+
+            <p>
+                <strong>⏰ Tiempo disponible:</strong>
+                ${tiempo} minutos
+            </p>
+
+            <p>
+                <strong>🎯 Objetivo:</strong>
+                ${objetivo}
+            </p>
+
+            <p>
+                <strong>📊 Dificultad:</strong>
+                ${dificultad}
+            </p>
+
+
+            <hr style="
+                margin:25px 0;
+                border:0;
+                border-top:1px solid #ddd;
+            ">
+
+
+            <h3>
+                🧠 Técnicas recomendadas para ti
+            </h3>
+
+            ${tecnicasHTML}
+
+
+            <h3 style="
+                margin-top:30px;
+            ">
+                ⏱️ Tu plan de estudio
+            </h3>
+
             <div style="
                 background:white;
-                padding:18px;
-                margin:12px 0;
-                border-radius:14px;
-                border:1px solid #e3e5ef;
+                padding:20px;
+                margin-top:15px;
+                border-radius:16px;
             ">
-                <h3>${tecnica.icono} ${tecnica.nombre}</h3>
-                <p>${tecnica.descripcion}</p>
+
+                ${planHTML}
+
             </div>
-        `;
-    });
 
 
-    resultado.innerHTML = `
+            <div style="
+                margin-top:25px;
+                padding:20px;
+                background:#eceaff;
+                border-radius:16px;
+            ">
 
-        <h2>🎯 Tu plan personalizado</h2>
+                <strong>
+                    💡 Consejo de Estudia+
+                </strong>
 
-        <p>
-            <strong>Materia:</strong> ${materia}
-        </p>
-
-        <p>
-            <strong>Tiempo disponible:</strong> ${tiempo} minutos
-        </p>
-
-        <p>
-            <strong>Objetivo:</strong> ${objetivo}
-        </p>
-
-        <hr style="margin:25px 0;border:0;border-top:1px solid #ddd;">
-
-        <h3>🧠 Técnicas recomendadas para ti</h3>
-
-        ${tecnicasHTML}
-
-        <h3 style="margin-top:30px;">
-            ⏱️ Cómo organizar tu tiempo
-        </h3>
-
-        <div style="margin-top:15px;">
-            ${bloques.map(bloque => `
                 <p style="
-                    padding:8px 0;
-                    margin:0;
+                    margin-top:8px;
                 ">
-                    ${bloque}
+
+                    No intentes estudiar todo de memoria.
+                    Comprende primero, practica después
+                    y finalmente comprueba cuánto recuerdas.
+
                 </p>
-            `).join("")}
+
+            </div>
+
         </div>
 
-        <div style="
-            margin-top:25px;
-            padding:20px;
-            background:#f0efff;
-            border-radius:14px;
-        ">
-            <strong>💡 Consejo de Estudia+</strong>
-            <p style="margin-top:8px;">
-                No intentes memorizar todo de una sola vez.
-                Primero comprende el tema, después practica
-                y finalmente repasa.
-            </p>
-        </div>
     `;
 
+
     resultado.classList.add("activo");
+
 
     resultado.scrollIntoView({
         behavior: "smooth",
         block: "center"
     });
+
 }
 
 
 // ==========================================
-// CONECTAR BOTÓN
+// INICIAR ESTUDIA+
 // ==========================================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
 
-    const boton = document.querySelector(".boton-generar");
+        const boton =
+            document.querySelector(
+                ".boton-generar"
+            );
 
-    if (boton) {
 
-        boton.addEventListener("click", function (evento) {
+        if (boton) {
 
-            evento.preventDefault();
+            boton.addEventListener(
+                "click",
+                function(evento) {
 
-            crearPlan();
+                    evento.preventDefault();
 
-        });
+                    analizarRespuestas();
+
+                }
+            );
+
+        }
 
     }
-
-});
+);
