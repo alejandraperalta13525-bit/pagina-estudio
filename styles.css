@@ -1,3 +1,7 @@
+/* =========================================
+   ESTUDIA+ | DISEÑO PRINCIPAL
+   ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,427 +14,599 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fb;
-    color: #263238;
+    background: #f7f9fc;
+    color: #202938;
     line-height: 1.6;
 }
 
-/* ==================== MENÚ ==================== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
 
 header {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e8edf5;
+    backdrop-filter: blur(10px);
 }
 
 .navbar {
     max-width: 1200px;
     margin: auto;
-
-    padding: 18px 30px;
+    min-height: 72px;
+    padding: 0 25px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.navbar h1 {
-    color: #5b4bdb;
-    font-size: 22px;
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #5b4cf0;
+    white-space: nowrap;
 }
 
-.navbar ul {
-    list-style: none;
-
+.menu {
     display: flex;
+    align-items: center;
     gap: 25px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+.menu a {
+    color: #5f6878;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-.navbar a:hover {
-    color: #5b4bdb;
+.menu a:hover {
+    color: #5b4cf0;
 }
 
 
-/* ==================== INICIO ==================== */
+/* =========================================
+   INICIO
+   ========================================= */
 
 .hero {
-    min-height: 600px;
-
-    max-width: 1200px;
-    margin: auto;
-
-    padding: 80px 30px;
+    min-height: 650px;
+    padding: 100px 25px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ebe8ff 0, transparent 30%),
+        radial-gradient(circle at 90% 80%, #dff8f3 0, transparent 30%),
+        #f8faff;
 }
 
-.hero-text {
-    max-width: 600px;
+.hero-content {
+    max-width: 850px;
+    text-align: center;
 }
 
-.subtitulo {
-    color: #5b4bdb;
+.etiqueta {
+    display: inline-block;
 
-    font-weight: bold;
+    padding: 8px 15px;
+    margin-bottom: 22px;
 
-    letter-spacing: 2px;
+    border-radius: 50px;
+
+    background: #ece9ff;
+    color: #5749dc;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
-.hero h2 {
-    font-size: 52px;
-
-    line-height: 1.1;
-
-    margin: 20px 0;
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
 }
 
-.hero h2 span {
-    color: #5b4bdb;
+.hero h1 span {
+    display: block;
+    color: #5b4cf0;
 }
 
 .hero p {
+    max-width: 680px;
+    margin: 0 auto 35px;
+
+    color: #687386;
     font-size: 18px;
-
-    margin-bottom: 30px;
 }
 
-.hero-image {
-    font-size: 150px;
-}
-
-
-/* ==================== BOTONES ==================== */
-
-.boton {
-    display: inline-block;
-
-    padding: 14px 25px;
-
-    background: #5b4bdb;
-
-    color: white;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    border: none;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.boton:hover {
-    transform: translateY(-3px);
-
-    opacity: 0.9;
-}
-
-
-/* ==================== SECCIONES ==================== */
-
-.seccion {
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 80px 30px;
-}
-
-.seccion h2 {
-    text-align: center;
-
-    font-size: 36px;
-
-    margin-bottom: 15px;
-}
-
-.descripcion {
-    max-width: 700px;
-
-    text-align: center;
-
-    margin: 0 auto 45px;
-
-    color: #666;
-}
-
-
-/* ==================== TARJETAS ==================== */
-
-.tarjetas {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
-
-    gap: 25px;
-}
-
-.tarjeta {
-    background: white;
-
-    padding: 30px;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-.tarjeta:hover {
-    transform: translateY(-8px);
-}
-
-.tarjeta h3 {
-    margin: 10px 0;
-}
-
-.icono {
-    font-size: 45px;
-}
-
-
-/* ==================== TÉCNICAS ==================== */
-
-.tecnicas {
-    background: #eef0ff;
-
-    max-width: none;
-}
-
-.tecnicas .tarjetas {
-    max-width: 1140px;
-
-    margin: auto;
-}
-
-.tecnica button {
-    margin-top: 15px;
-
-    padding: 10px 18px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    background: #5b4bdb;
-
-    color: white;
-
-    cursor: pointer;
-}
-
-.tecnica button:hover {
-    opacity: 0.8;
-}
-
-
-/* ==================== CONSEJOS ==================== */
-
-.consejos {
-    max-width: 800px;
-
-    margin: auto;
-}
-
-.consejo {
-    background: white;
-
-    margin-bottom: 15px;
-
-    padding: 20px;
-
-    border-radius: 12px;
-
-    display: flex;
-
-    gap: 20px;
-
+.boton,
+.boton-generar {
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
 
-    box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.06);
-}
-
-.consejo span {
-    font-size: 40px;
-}
-
-
-/* ==================== TEST ==================== */
-
-.test {
-    background: white;
-
-    border-radius: 20px;
-
-    margin-bottom: 60px;
-}
-
-.test > p {
-    text-align: center;
-
-    margin-bottom: 40px;
-}
-
-.pregunta {
-    max-width: 700px;
-
-    margin: 25px auto;
-
-    padding: 25px;
-
-    background: #f5f7fb;
-
+    border: none;
     border-radius: 12px;
+
+    padding: 15px 25px;
+
+    background: #5b4cf0;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow: 0 10px 25px rgba(91, 76, 240, 0.2);
+
+    transition: 0.25s;
 }
 
-.pregunta h3 {
-    margin-bottom: 15px;
+.boton:hover,
+.boton-generar:hover {
+    transform: translateY(-3px);
+    background: #493bd2;
 }
 
-.pregunta label {
-    display: block;
 
+/* =========================================
+   TÍTULOS
+   ========================================= */
+
+.titulo-seccion {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.titulo-seccion > span {
+    color: #5b4cf0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.titulo-seccion h2 {
     margin: 12px 0;
 
-    cursor: pointer;
+    font-size: clamp(30px, 5vw, 45px);
+    line-height: 1.15;
 }
 
-.pregunta input {
-    margin-right: 10px;
-}
-
-.test-btn {
-    display: block;
-
-    margin: 30px auto;
-}
-
-#resultado {
-    max-width: 600px;
-
-    margin: auto;
-
-    padding: 20px;
-
-    text-align: center;
-
-    border-radius: 10px;
-
-    font-weight: bold;
+.titulo-seccion p {
+    color: #6c7585;
+    font-size: 17px;
 }
 
 
-/* ==================== VENTANA ==================== */
+/* =========================================
+   ASISTENTE
+   ========================================= */
 
-.modal {
-    display: none;
-
-    position: fixed;
-
-    z-index: 200;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.6);
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-.modal-contenido {
+.asistente {
+    padding: 100px 25px;
     background: white;
+}
 
-    max-width: 500px;
+.formulario {
+    max-width: 900px;
+    margin: auto;
 
     padding: 40px;
 
-    border-radius: 15px;
+    background: white;
 
-    position: relative;
+    border: 1px solid #e4e8f0;
+    border-radius: 24px;
+
+    box-shadow: 0 20px 60px rgba(30, 40, 70, 0.08);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
-.cerrar {
-    position: absolute;
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
 
-    top: 10px;
-    right: 20px;
+.campo label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #303949;
+}
 
-    font-size: 30px;
+.campo input,
+.campo select {
+    width: 100%;
 
-    cursor: pointer;
+    padding: 14px 15px;
+
+    border: 1px solid #dfe4ed;
+    border-radius: 10px;
+
+    background: #fafbfe;
+
+    color: #303949;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #5b4cf0;
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(91, 76, 240, 0.08);
+}
+
+.boton-generar {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+    width: 100%;
 }
 
 
-/* ==================== PIE DE PÁGINA ==================== */
+/* =========================================
+   RESULTADO
+   ========================================= */
 
-footer {
-    background: #24233a;
+.resultado {
+    max-width: 900px;
+    margin: 35px auto 0;
 
-    color: white;
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: #f1efff;
+    border: 1px solid #ddd9ff;
+
+    display: none;
+}
+
+.resultado h2 {
+    margin-bottom: 20px;
+    color: #4035bb;
+}
+
+.resultado.activo {
+    display: block;
+}
+
+
+/* =========================================
+   SECCIONES
+   ========================================= */
+
+.seccion {
+    padding: 100px 25px;
+}
+
+.seccion:nth-child(even) {
+    background: #ffffff;
+}
+
+
+/* =========================================
+   TARJETAS DE TÉCNICAS
+   ========================================= */
+
+.tarjetas-tecnicas {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjetas-tecnicas article {
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #e7ebf2;
+    border-radius: 18px;
+
+    transition: 0.25s;
+}
+
+.tarjetas-tecnicas article:hover {
+    transform: translateY(-6px);
+
+    border-color: #d7d1ff;
+
+    box-shadow: 0 15px 35px rgba(40, 45, 80, 0.08);
+}
+
+.tarjetas-tecnicas article > div {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.tarjetas-tecnicas h3 {
+    margin-bottom: 8px;
+}
+
+.tarjetas-tecnicas p {
+    color: #727b8c;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   PLANTILLAS
+   ========================================= */
+
+.plantillas {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.plantillas article {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e5e9f0;
+    border-radius: 18px;
 
     text-align: center;
 
-    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(30, 40, 70, 0.05);
 }
 
-footer h3 {
+.plantillas article > div {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.plantillas h3 {
+    margin-bottom: 8px;
+}
+
+.plantillas p {
+    margin-bottom: 20px;
+    color: #717a8b;
+}
+
+.plantillas button {
+    border: none;
+    border-radius: 9px;
+
+    padding: 11px 18px;
+
+    background: #eeeaff;
+    color: #5546d7;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PLANES
+   ========================================= */
+
+.planes {
+    background: #f6f7fb;
+}
+
+.planes-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+.plan {
+    position: relative;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #e2e6ee;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(30, 40, 70, 0.05);
+}
+
+.plan h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.precio small {
+    font-size: 14px;
+    font-weight: 500;
+    color: #7b8492;
+}
+
+.plan ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.plan li {
+    padding: 7px 0;
+    color: #5f6978;
+    font-size: 14px;
+}
+
+.plan button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #ece9ff;
+    color: #5143d5;
+
+    font-weight: 800;
+}
+
+.destacado {
+    border: 2px solid #6a5af5;
+    transform: scale(1.03);
+}
+
+.destacado button {
+    background: #5b4cf0;
+    color: white;
+}
+
+.popular {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 5px 14px;
+
+    background: #5b4cf0;
+    color: white;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.premium {
+    background: linear-gradient(145deg, #ffffff, #f3f1ff);
+}
+
+.corona {
+    font-size: 28px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 60px 25px;
+
+    text-align: center;
+
+    background: #171b29;
+    color: white;
+}
+
+footer h2 {
+    color: #a69cff;
     margin-bottom: 10px;
 }
 
+footer p {
+    color: #aeb5c4;
+    margin-bottom: 15px;
+}
 
-/* ==================== CELULARES ==================== */
+footer small {
+    color: #747d8e;
+}
 
-@media (max-width: 800px) {
 
-    .navbar {
-        flex-direction: column;
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 
-        gap: 15px;
+@media (max-width: 900px) {
+
+    .menu {
+        display: none;
     }
 
-    .navbar ul {
-        flex-wrap: wrap;
-
-        justify-content: center;
+    .tarjetas-tecnicas {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .planes-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .destacado {
+        transform: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
 
     .hero {
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 40px;
+        padding: 70px 20px;
     }
 
-    .hero h2 {
-        font-size: 40px;
+    .hero h1 {
+        font-size: 42px;
     }
 
-    .hero-image {
-        font-size: 100px;
+    .formulario {
+        grid-template-columns: 1fr;
+        padding: 25px;
     }
+
+    .boton-generar {
+        grid-column: auto;
+    }
+
+    .tarjetas-tecnicas {
+        grid-template-columns: 1fr;
+    }
+
+    .plantillas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion,
+    .asistente {
+        padding: 70px 20px;
+    }
+
 }
