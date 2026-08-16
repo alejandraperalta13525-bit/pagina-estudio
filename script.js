@@ -19,32 +19,90 @@ document.addEventListener("DOMContentLoaded", function () {
     const tecnicas = {
 
         matematicas: [
-            {
-                nombre: "Práctica activa",
-                icono: "🧮",
-                descripcion: "Resuelve ejercicios sin mirar primero la solución.",
-                ideal: ["examen", "comprender", "tarea"]
-            },
-            {
-                nombre: "Resolución paso a paso",
-                icono: "📝",
-                descripcion: "Divide cada problema en pasos pequeños y revisa cada procedimiento.",
-                ideal: ["comprender", "tarea", "examen"]
-            },
-            {
-                nombre: "Recuperación activa",
-                icono: "🧠",
-                descripcion: "Intenta recordar fórmulas y procedimientos antes de consultar tus apuntes.",
-                ideal: ["examen", "memorizar", "comprender"]
-            },
-            {
-                nombre: "Práctica intercalada",
-                icono: "🔀",
-                descripcion: "Combina diferentes tipos de ejercicios para aprender a identificar qué método utilizar.",
-                ideal: ["examen", "comprender"]
-            }
-        ],
+           {
+    nombre: "Práctica activa",
+    icono: "🧮",
 
+    descripcion:
+        "Resuelve ejercicios sin mirar primero la solución.",
+
+    comoHacerlo: [
+        "Lee y comprende el problema.",
+        "Intenta resolverlo sin mirar la respuesta.",
+        "Comprueba tu procedimiento.",
+        "Identifica tus errores.",
+        "Vuelve a resolver el ejercicio."
+    ],
+
+    ideal: ["examen", "comprender", "tarea"],
+
+    tiempo: "10–25 minutos",
+
+    dificultad: "Media"
+},
+            {
+    nombre: "Resolución paso a paso",
+    icono: "📝",
+
+    descripcion:
+        "Divide cada problema en pasos pequeños y revisa cada procedimiento.",
+
+    comoHacerlo: [
+        "Lee cuidadosamente el problema.",
+        "Identifica qué información tienes.",
+        "Determina qué necesitas encontrar.",
+        "Resuelve el problema paso a paso.",
+        "Comprueba si tu respuesta tiene sentido."
+    ],
+
+    ideal: ["comprender", "tarea", "examen"],
+
+    tiempo: "10–20 minutos",
+
+    dificultad: "Media"
+},
+           {
+    nombre: "Recuperación activa",
+    icono: "🧠",
+
+    descripcion:
+        "Intenta recordar fórmulas, conceptos o procedimientos sin consultar tus apuntes.",
+
+    comoHacerlo: [
+        "Estudia el contenido durante unos minutos.",
+        "Cierra tus apuntes o material.",
+        "Escribe o explica todo lo que recuerdes.",
+        "Compara tu respuesta con el material.",
+        "Repasa únicamente lo que hayas olvidado."
+    ],
+
+    ideal: ["examen", "memorizar", "comprender"],
+
+    tiempo: "10–20 minutos",
+               
+    dificultad: "Media"
+},
+            {
+    nombre: "Práctica intercalada",
+    icono: "🔀",
+
+    descripcion:
+        "Combina diferentes tipos de ejercicios para aprender a identificar qué método utilizar en cada problema.",
+
+    comoHacerlo: [
+        "Elige ejercicios de diferentes tipos.",
+        "Mezcla los ejercicios en lugar de resolver siempre el mismo tipo.",
+        "Antes de comenzar cada ejercicio, identifica qué método necesitas.",
+        "Resuelve el problema sin mirar la solución.",
+        "Revisa tus errores y descubre qué procedimiento era el adecuado."
+    ],
+
+    ideal: ["examen", "comprender"],
+
+    tiempo: "15–30 minutos",
+
+    dificultad: "Alta"
+},
 
         ciencias: [
             {
