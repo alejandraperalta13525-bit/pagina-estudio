@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "Vuelve a resolver el ejercicio."
         ],
         ideal: ["tarea", "examen", "comprender"],
-        tiempos: ["20", "30", "60", "120"],s
+        tiempos: ["20", "30", "60", "120"],
         dificultad: ["facil", "medio", "dificil"]
     },
 
