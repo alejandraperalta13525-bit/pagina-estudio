@@ -478,7 +478,27 @@ if (tiempo === "120") {
 
         // Seleccionar máximo 4
 
-        recomendadas = recomendadas.slice(0, 4);
+       // Seleccionar técnicas según el tiempo disponible
+
+if (tiempo === "20") {
+    recomendadas = recomendadas.slice(0, 2);
+}
+
+else if (tiempo === "30") {
+    recomendadas = recomendadas.slice(0, 3);
+}
+
+else if (tiempo === "60") {
+    recomendadas = recomendadas.slice(0, 3);
+}
+
+else if (tiempo === "120") {
+    recomendadas = recomendadas.slice(0, 4);
+}
+
+else {
+    recomendadas = recomendadas.slice(0, 3);
+}
 
 
         // ==================================================
