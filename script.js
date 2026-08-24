@@ -771,13 +771,80 @@ if (tiempo === "120") {
         });
 
 
-       // Ordenar por relevancia
+    // Ordenar por relevancia y objetivo
 
-recomendadas.sort(function (a, b) {
+let prioridadesObjetivo = {
+    examen: [
+        "Recuperación activa",
+        "Práctica activa",
+        "Preguntas activas",
+        "Preguntas de comprensión",
+        "Flashcards",
+        "Práctica intercalada"
+    ],
 
-    return b.puntuacion - a.puntuacion;
+    tarea: [
+        "Resolución paso a paso",
+        "Práctica activa",
+        "Preguntas de análisis",
+        "Resumen activo",
+        "Método Feynman"
+    ],
 
-});
+    comprender: [
+        "Método Feynman",
+        "Resolución paso a paso",
+        "Mapa conceptual",
+        "Mapas conceptuales",
+        "Preguntas de comprensión",
+        "Análisis de textos",
+        "Lectura activa"
+    ],
+
+    memorizar: [
+        "Recuperación activa",
+        "Flashcards",
+        "Repetición espaciada",
+        "Práctica activa"
+    ],
+
+    proyecto: [
+        "Organización por bloques",
+        "Práctica activa",
+        "Método Feynman",
+        "Mapa conceptual",
+        "Mapas conceptuales",
+        "Resumen activo"
+    ]
+};
+
+
+if (prioridadesObjetivo[objetivo]) {
+
+    recomendadas.sort(function (a, b) {
+
+        let prioridadA = prioridadesObjetivo[objetivo].indexOf(a.nombre);
+        let prioridadB = prioridadesObjetivo[objetivo].indexOf(b.nombre);
+
+        if (prioridadA === -1) prioridadA = 999;
+        if (prioridadB === -1) prioridadB = 999;
+
+        // Primero se respeta el objetivo,
+        // y luego la puntuación calculada anteriormente.
+        if (prioridadA !== prioridadB) {
+            return prioridadA - prioridadB;
+        }
+
+        return b.puntuacion - a.puntuacion;
+    });
+
+} else {
+
+    recomendadas.sort(function (a, b) {
+        return b.puntuacion - a.puntuacion;
+    });
+
+}
 
 
 // PRIORIDAD SEGÚN EL OBJETIVO
