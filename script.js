@@ -782,21 +782,70 @@ recomendadas.sort(function (a, b) {
 
 // PRIORIDAD SEGÚN EL OBJETIVO
 
-let tecnicasObjetivo = recomendadas.filter(function (tecnica) {
-    return tecnica.ideal.includes(objetivo);
-});
+let prioridades = {
+    examen: [
+        "Recuperación activa",
+        "Práctica activa",
+        "Preguntas activas",
+        "Flashcards",
+        "Práctica intercalada"
+    ],
 
-let otrasTecnicas = recomendadas.filter(function (tecnica) {
-    return !tecnica.ideal.includes(objetivo);
-});
+    tarea: [
+        "Resolución paso a paso",
+        "Práctica activa",
+        "Preguntas de análisis",
+        "Resumen activo",
+        "Método Feynman"
+    ],
 
-// Primero las técnicas relacionadas con el objetivo
-recomendadas = tecnicasObjetivo.concat(otrasTecnicas);
+    comprender: [
+        "Método Feynman",
+        "Resolución paso a paso",
+        "Mapa conceptual",
+        "Mapas conceptuales",
+        "Preguntas de comprensión",
+        "Análisis de textos",
+        "Lectura activa"
+    ],
+
+    memorizar: [
+        "Recuperación activa",
+        "Flashcards",
+        "Repetición espaciada",
+        "Práctica activa"
+    ],
+
+    proyecto: [
+        "Práctica activa",
+        "Método Feynman",
+        "Mapa conceptual",
+        "Mapas conceptuales",
+        "Resumen activo",
+        "Organización por bloques"
+    ]
+};
 
 
-// Seleccionar máximo 4
+// Ordenar las técnicas según el objetivo elegido
 
-// Seleccionar técnicas según el tiempo disponible
+if (prioridades[objetivo]) {
+
+    recomendadas.sort(function (a, b) {
+
+        let prioridadA = prioridades[objetivo].indexOf(a.nombre);
+        let prioridadB = prioridades[objetivo].indexOf(b.nombre);
+
+        // Las técnicas que no estén en la lista quedan al final
+        if (prioridadA === -1) prioridadA = 999;
+        if (prioridadB === -1) prioridadB = 999;
+
+        return prioridadA - prioridadB;
+    });
+}
+
+
+// Seleccionar cantidad según el tiempo
 
 if (tiempo === "20") {
     recomendadas = recomendadas.slice(0, 2);
@@ -817,7 +866,6 @@ else if (tiempo === "120") {
 else {
     recomendadas = recomendadas.slice(0, 3);
 }
-
 
         // ==================================================
         // PLAN SEGÚN EL TIEMPO
