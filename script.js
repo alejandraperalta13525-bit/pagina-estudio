@@ -467,18 +467,32 @@ if (tiempo === "120") {
         });
 
 
-        // Ordenar por relevancia
+       // Ordenar por relevancia
 
-        recomendadas.sort(function (a, b) {
+recomendadas.sort(function (a, b) {
 
-            return b.puntuacion - a.puntuacion;
+    return b.puntuacion - a.puntuacion;
 
-        });
+});
 
 
-        // Seleccionar máximo 4
+// PRIORIDAD SEGÚN EL OBJETIVO
 
-       // Seleccionar técnicas según el tiempo disponible
+let tecnicasObjetivo = recomendadas.filter(function (tecnica) {
+    return tecnica.ideal.includes(objetivo);
+});
+
+let otrasTecnicas = recomendadas.filter(function (tecnica) {
+    return !tecnica.ideal.includes(objetivo);
+});
+
+// Primero las técnicas relacionadas con el objetivo
+recomendadas = tecnicasObjetivo.concat(otrasTecnicas);
+
+
+// Seleccionar máximo 4
+
+// Seleccionar técnicas según el tiempo disponible
 
 if (tiempo === "20") {
     recomendadas = recomendadas.slice(0, 2);
