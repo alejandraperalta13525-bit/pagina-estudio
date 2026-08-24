@@ -122,55 +122,167 @@ document.addEventListener("DOMContentLoaded", function () {
                 nombre: "Método Feynman",
                 icono: "💡",
                 descripcion: "Explica el concepto con palabras sencillas como si se lo enseñaras a otra persona.",
+               comoHacerlo: [
+    "Elige un concepto.",
+    "Explícalo con palabras sencillas.",
+    "Imagina que se lo enseñas a otra persona.",
+    "Identifica las partes que no puedes explicar.",
+    "Repasa esas partes y vuelve a explicarlas."
+],
                 ideal: ["comprender", "examen"]
             },
             {
                 nombre: "Mapas conceptuales",
                 icono: "🧠",
                 descripcion: "Relaciona conceptos, procesos y causas para comprender cómo se conecta la información.",
+                comoHacerlo: [
+    "Escribe el tema principal.",
+    "Identifica los conceptos más importantes.",
+    "Organiza los conceptos de lo general a lo específico.",
+    "Une los conceptos con líneas y palabras clave.",
+    "Revisa si el mapa representa correctamente el tema."
+],
                 ideal: ["comprender", "memorizar"]
             },
             {
                 nombre: "Preguntas activas",
                 icono: "❓",
                 descripcion: "Convierte tus apuntes en preguntas y trata de responderlas sin mirar.",
+               comoHacerlo: [
+    "Convierte tus apuntes en preguntas.",
+    "Intenta responderlas sin mirar.",
+    "Comprueba tus respuestas.",
+    "Marca las preguntas que hayas respondido mal.",
+    "Repasa y vuelve a responderlas."
+],
                 ideal: ["examen", "memorizar"]
             },
             {
                 nombre: "Práctica activa",
                 icono: "🔬",
                 descripcion: "Aplica los conceptos mediante ejercicios, ejemplos o problemas.",
+               comoHacerlo: [
+    "Elige ejercicios o problemas relacionados con el tema.",
+    "Intenta resolverlos sin mirar la solución.",
+    "Explica por qué elegiste cada respuesta.",
+    "Comprueba tus resultados.",
+    "Corrige tus errores y vuelve a intentarlo."
+],
                 ideal: ["tarea", "comprender", "examen"]
-            }
+            },
+                {
+        nombre: "Recuperación activa",
+        icono: "🧠",
+        descripcion: "Intenta recordar conceptos, procesos y explicaciones sin consultar tus apuntes.",
+        comoHacerlo: [
+            "Lee y comprende el concepto.",
+            "Cierra tus apuntes.",
+            "Escribe o explica lo que recuerdes.",
+            "Comprueba qué partes olvidaste.",
+            "Repasa y vuelve a intentarlo."
         ],
+        ideal: ["examen", "memorizar", "comprender"]
+    },
+                {
+        nombre: "Flashcards",
+        icono: "🃏",
+        descripcion: "Utiliza tarjetas para repasar conceptos, términos, procesos y definiciones importantes.",
+        comoHacerlo: [
+            "Escribe una pregunta o concepto en una tarjeta.",
+            "Coloca la respuesta en el reverso.",
+            "Intenta responder sin mirar.",
+            "Comprueba tu respuesta.",
+            "Repite las tarjetas que hayas olvidado."
+        ],
+        ideal: ["examen", "memorizar", "comprender"]
+    }
+            ],
 
-
+        
         historia: [
             {
                 nombre: "Línea de tiempo",
                 icono: "📅",
                 descripcion: "Ordena acontecimientos para comprender cuándo y cómo ocurrieron.",
+               comoHacerlo: [
+    "Identifica los acontecimientos principales del tema.",
+    "Anota las fechas correspondientes.",
+    "Ordena los acontecimientos cronológicamente.",
+    "Agrega una breve explicación de cada acontecimiento.",
+    "Revisa la secuencia y las relaciones entre los hechos."
+        ],
                 ideal: ["comprender", "memorizar", "examen"]
             },
             {
                 nombre: "Mapa mental",
                 icono: "🗺️",
                 descripcion: "Relaciona personajes, fechas, lugares, causas y consecuencias.",
+                comoHacerlo: [
+    "Escribe el tema principal en el centro.",
+    "Identifica las ideas más importantes.",
+    "Coloca las ideas principales alrededor del tema.",
+    "Agrega palabras clave, ejemplos o imágenes.",
+    "Revisa que las ideas estén conectadas correctamente."
+],
                 ideal: ["comprender", "memorizar"]
             },
             {
                 nombre: "Flashcards",
                 icono: "🃏",
                 descripcion: "Practica fechas, personajes y conceptos mediante tarjetas.",
+               comoHacerlo: [
+    "Escribe una pregunta o concepto histórico en una tarjeta.",
+    "Coloca la respuesta en el reverso.",
+    "Intenta responder sin mirar.",
+    "Comprueba tu respuesta.",
+    "Repite las tarjetas que hayas olvidado."
+],
                 ideal: ["memorizar", "examen"]
             },
             {
                 nombre: "Recuperación activa",
                 icono: "🧠",
                 descripcion: "Intenta explicar los acontecimientos sin consultar tus apuntes.",
+               comoHacerlo: [
+    "Lee y comprende el tema.",
+    "Cierra tus apuntes.",
+    "Escribe o explica lo que recuerdes.",
+    "Comprueba qué información olvidaste.",
+    "Repasa y vuelve a intentarlo."
+],
                 ideal: ["examen", "memorizar"]
-            }
+            },
+                {
+        nombre: "Comparación histórica",
+        icono: "🔗",
+        descripcion: "Compara personajes, acontecimientos, épocas o procesos históricos para identificar semejanzas y diferencias.",
+        comoHacerlo: [
+            "Elige los dos temas que vas a comparar.",
+            "Anota las características principales de cada uno.",
+            "Identifica sus semejanzas.",
+            "Identifica sus diferencias.",
+            "Escribe una conclusión sobre lo aprendido."
         ],
+        ideal: ["comprender", "tarea", "examen"],
+        tiempos: ["20", "30", "60"],
+        dificultad: ["medio", "dificil"]
+    },
+                {
+        nombre: "Preguntas de análisis",
+        icono: "❓",
+        descripcion: "Analiza las causas, consecuencias y relaciones entre acontecimientos históricos.",
+        comoHacerlo: [
+            "Elige un acontecimiento histórico.",
+            "Pregúntate por qué ocurrió.",
+            "Identifica sus principales consecuencias.",
+            "Relaciona el acontecimiento con otros hechos.",
+            "Responde con tus propias palabras."
+        ],
+        ideal: ["comprender", "examen", "tarea"],
+        tiempos: ["20", "30", "60"],
+        dificultad: ["medio", "dificil"]
+    }
+            ],
 
 
         idiomas: [
@@ -178,27 +290,85 @@ document.addEventListener("DOMContentLoaded", function () {
                 nombre: "Repetición espaciada",
                 icono: "🔄",
                 descripcion: "Repasa vocabulario y conceptos en diferentes momentos para fortalecer la memoria.",
+               comoHacerlo: [
+    "Selecciona las palabras o expresiones que necesitas aprender.",
+    "Repásalas después de unos minutos.",
+    "Vuelve a repasarlas más tarde el mismo día.",
+    "Repásalas nuevamente al día siguiente.",
+    "Aumenta poco a poco el tiempo entre cada repaso."
+],
                 ideal: ["memorizar", "examen"]
             },
             {
                 nombre: "Flashcards",
                 icono: "🃏",
                 descripcion: "Practica vocabulario, expresiones y conceptos mediante tarjetas.",
+               comoHacerlo: [
+    "Escribe una palabra o expresión en el frente de la tarjeta.",
+    "Escribe su significado o traducción en el reverso.",
+    "Intenta recordar la respuesta antes de voltear la tarjeta.",
+    "Separa las palabras que recuerdas de las que te cuestan.",
+    "Repite con mayor frecuencia las tarjetas que hayas olvidado."
+],
                 ideal: ["memorizar", "examen"]
             },
             {
                 nombre: "Práctica activa",
                 icono: "🗣️",
                 descripcion: "Utiliza las palabras y estructuras creando tus propias frases.",
+                comoHacerlo: [
+    "Elige vocabulario o estructuras que quieras practicar.",
+    "Escribe o pronuncia frases utilizando lo aprendido.",
+    "Intenta comunicar una idea sin traducir palabra por palabra.",
+    "Comprueba tus errores.",
+    "Repite las frases intentando mejorar."
+],
                 ideal: ["comprender", "tarea", "examen"]
             },
             {
                 nombre: "Inmersión",
                 icono: "🌎",
                 descripcion: "Escucha, lee o interactúa con contenido real en el idioma que estás aprendiendo.",
+                comoHacerlo: [
+    "Elige contenido relacionado con el idioma que estudias.",
+    "Escucha o lee el contenido en el idioma original.",
+    "Intenta comprender el significado por el contexto.",
+    "Anota palabras o expresiones nuevas.",
+    "Vuelve a utilizar las expresiones aprendidas."
+],
                 ideal: ["comprender", "tarea"]
-            }
-        ],
+            },
+            {
+    nombre: "Escucha activa",
+    icono: "🎧",
+    descripcion: "Escucha contenido en el idioma que estudias para reconocer palabras, expresiones y pronunciación en contexto.",
+    comoHacerlo: [
+        "Elige un audio, canción, video o conversación en el idioma.",
+        "Escucha una primera vez para comprender la idea general.",
+        "Vuelve a escuchar e identifica palabras y expresiones conocidas.",
+        "Anota las palabras que no reconociste.",
+        "Escucha nuevamente intentando comprender sin mirar la traducción."
+    ],
+    ideal: ["comprender", "tarea", "examen"],
+    tiempos: ["20", "30", "60"],
+    dificultad: ["facil", "medio"]
+},
+            {
+    nombre: "Conversación guiada",
+    icono: "💬",
+    descripcion: "Practica conversaciones utilizando vocabulario y expresiones relacionadas con el tema que estás estudiando.",
+    comoHacerlo: [
+        "Elige un tema para conversar.",
+        "Prepara algunas palabras y expresiones útiles.",
+        "Formula preguntas y responde en el idioma.",
+        "Intenta mantener la conversación sin traducir todo.",
+        "Anota tus errores y practica nuevamente."
+    ],
+    ideal: ["comprender", "tarea", "examen"],
+    tiempos: ["20", "30", "60"],
+    dificultad: ["medio", "dificil"]
+}
+            ],
 
 
         comunicacion: [
@@ -206,26 +376,84 @@ document.addEventListener("DOMContentLoaded", function () {
                 nombre: "Método Feynman",
                 icono: "💡",
                 descripcion: "Explica el contenido con tus propias palabras para comprobar si realmente lo entiendes.",
+               comoHacerlo: [
+    "Elige el concepto o tema que quieres comprender.",
+    "Explícalo con palabras sencillas, como si se lo enseñaras a otra persona.",
+    "Identifica las partes que no puedes explicar con claridad.",
+    "Vuelve a estudiar esas partes.",
+    "Explica nuevamente el tema hasta poder hacerlo con claridad."
+],
                 ideal: ["comprender", "examen"]
             },
             {
                 nombre: "Resumen activo",
                 icono: "📝",
                 descripcion: "Resume las ideas principales sin copiar literalmente el texto.",
+               comoHacerlo: [
+    "Lee el texto con atención.",
+    "Identifica las ideas principales.",
+    "Cierra el texto e intenta recordar lo más importante.",
+    "Escribe un resumen utilizando tus propias palabras.",
+    "Compara tu resumen con el texto y corrige lo necesario."
+],
                 ideal: ["comprender", "memorizar"]
             },
             {
                 nombre: "Preguntas de comprensión",
                 icono: "❓",
                 descripcion: "Crea preguntas sobre el contenido y respóndelas sin consultar el texto.",
+                comoHacerlo: [
+    "Lee el texto o contenido que estás estudiando.",
+    "Formula preguntas sobre las ideas principales.",
+    "Intenta responderlas sin mirar el texto.",
+    "Comprueba tus respuestas.",
+    "Repasa las preguntas que hayas respondido incorrectamente."
+],
                 ideal: ["examen", "memorizar"]
             },
             {
                 nombre: "Mapa conceptual",
                 icono: "🗺️",
                 descripcion: "Organiza las ideas y muestra cómo se relacionan entre sí.",
+                comoHacerlo: [
+    "Escribe el tema principal.",
+    "Identifica los conceptos más importantes.",
+    "Organiza los conceptos desde los más generales hasta los más específicos.",
+    "Conecta los conceptos con líneas y palabras clave.",
+    "Revisa que las conexiones representen correctamente el tema."
+],
                 ideal: ["comprender", "tarea"]
-            }
+            },
+            {
+    nombre: "Lectura activa",
+    icono: "📖",
+    descripcion: "Analiza un texto mientras lees para identificar ideas principales, información importante y relaciones entre conceptos.",
+    comoHacerlo: [
+        "Lee el texto buscando primero la idea general.",
+        "Subraya o identifica las ideas principales.",
+        "Anota palabras o conceptos importantes.",
+        "Hazte preguntas mientras avanzas en la lectura.",
+        "Explica con tus propias palabras lo que entendiste."
+    ],
+    ideal: ["comprender", "tarea", "examen"],
+    tiempos: ["20", "30", "60"],
+    dificultad: ["facil", "medio"]
+},
+            {
+    nombre: "Análisis de textos",
+    icono: "🔍",
+    descripcion: "Examina un texto para identificar su propósito, ideas principales, argumentos y recursos utilizados por el autor.",
+    comoHacerlo: [
+        "Lee el texto completo para conocer su contenido.",
+        "Identifica el propósito del autor.",
+        "Busca las ideas y argumentos principales.",
+        "Analiza cómo se relacionan las diferentes partes del texto.",
+        "Escribe una conclusión con lo que comprendiste."
+    ],
+    ideal: ["comprender", "examen", "tarea"],
+    tiempos: ["20", "30", "60"],
+    dificultad: ["medio", "dificil"]
+}
         ],
 
 
@@ -234,26 +462,84 @@ document.addEventListener("DOMContentLoaded", function () {
                 nombre: "Recuperación activa",
                 icono: "🧠",
                 descripcion: "Intenta recordar la información sin mirar tus apuntes.",
+               comoHacerlo: [
+    "Estudia el contenido con atención.",
+    "Cierra tus apuntes o materiales.",
+    "Intenta explicar o escribir todo lo que recuerdes.",
+    "Comprueba qué información olvidaste o confundiste.",
+    "Repasa esos puntos y vuelve a intentarlo."
+],
                 ideal: ["examen", "memorizar", "comprender"]
             },
             {
                 nombre: "Pomodoro",
                 icono: "🍅",
                 descripcion: "Divide tu estudio en periodos de concentración y descansos.",
+                comoHacerlo: [
+    "Elige la tarea o tema que vas a estudiar.",
+    "Estudia durante 25 minutos sin distracciones.",
+    "Descansa durante 5 minutos.",
+    "Repite el ciclo de estudio y descanso.",
+    "Después de cuatro ciclos, realiza un descanso más largo."
+],
                 ideal: ["examen", "tarea", "comprender"]
             },
             {
                 nombre: "Método Feynman",
                 icono: "💡",
                 descripcion: "Explica el contenido con palabras sencillas para descubrir qué partes todavía no comprendes.",
+                comoHacerlo: [
+    "Elige el concepto que quieres aprender.",
+    "Explícalo con palabras sencillas, como si se lo enseñaras a otra persona.",
+    "Identifica las partes que no puedes explicar bien.",
+    "Vuelve a estudiar esas partes.",
+    "Explica nuevamente el concepto hasta comprenderlo con claridad."
+],
                 ideal: ["comprender", "examen"]
             },
             {
                 nombre: "Repetición espaciada",
                 icono: "🔄",
                 descripcion: "Distribuye los repasos a lo largo del tiempo.",
+               comoHacerlo: [
+    "Selecciona la información que necesitas aprender.",
+    "Repásala poco después de estudiarla.",
+    "Vuelve a repasarla más tarde.",
+    "Aumenta progresivamente el tiempo entre repasos.",
+    "Continúa repasando hasta poder recordarla con facilidad."
+],
                 ideal: ["memorizar", "examen"]
-            }
+            },
+            {
+    nombre: "Resumen activo",
+    icono: "📝",
+    descripcion: "Organiza la información más importante utilizando tus propias palabras para comprobar qué has comprendido.",
+    comoHacerlo: [
+        "Lee y comprende el contenido.",
+        "Identifica las ideas principales.",
+        "Cierra tus apuntes.",
+        "Escribe un resumen utilizando tus propias palabras.",
+        "Compara tu resumen con el contenido original y corrige lo necesario."
+    ],
+    ideal: ["comprender", "tarea", "examen"],
+    tiempos: ["20", "30", "60"],
+    dificultad: ["facil", "medio"]
+},
+            {
+    nombre: "Organización por bloques",
+    icono: "🗂️",
+    descripcion: "Divide un tema amplio en pequeños bloques de información para estudiarlos de manera organizada.",
+    comoHacerlo: [
+        "Divide el tema en partes pequeñas.",
+        "Ordena los bloques desde lo más importante hasta lo menos importante.",
+        "Estudia un bloque a la vez.",
+        "Haz una pausa breve entre bloques.",
+        "Al terminar, relaciona todos los bloques para comprender el tema completo."
+    ],
+    ideal: ["comprender", "tarea", "proyecto"],
+    tiempos: ["30", "60", "120"],
+    dificultad: ["facil", "medio"]
+}
         ]
 
     };
