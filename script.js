@@ -97,8 +97,26 @@ document.addEventListener("DOMContentLoaded", function () {
         ideal: ["comprender", "examen"],
         tiempos: ["30", "60", "120"],
         dificultad: ["medio", "dificil"]
+    },
+
+    {
+        nombre: "Flashcards",
+        icono: "🃏",
+        descripcion: "Utiliza tarjetas para repasar fórmulas, conceptos y procedimientos importantes.",
+        comoHacerlo: [
+            "Escribe una fórmula o concepto en una tarjeta.",
+            "Escribe la respuesta en el reverso.",
+            "Intenta recordar la respuesta sin mirar.",
+            "Comprueba si tu respuesta es correcta.",
+            "Repite las tarjetas que hayas olvidado."
+        ],
+        ideal: ["examen", "memorizar", "comprender"],
+        tiempos: ["20", "30", "60"],
+        dificultad: ["facil", "medio"]
     }
-],
+],     
+  
+        
         ciencias: [
             {
                 nombre: "Método Feynman",
