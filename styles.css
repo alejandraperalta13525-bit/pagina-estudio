@@ -325,6 +325,10 @@ header {
     gap: 20px;
 }
 
+.tarjetas-tecnicas > h3 {
+    grid-column: 1 / -1;
+}
+
 .tarjetas-tecnicas article {
     padding: 28px;
 
