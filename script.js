@@ -1448,12 +1448,30 @@ window.agregarTareaPlanificador = function () {
         border:1px solid #e5e8ef;
     `;
 
-    nuevaTarea.innerHTML = `
-        <strong>📚 ${materia}</strong>
-        <p style="margin:5px 0;">📝 ${tarea}</p>
-        <small>📅 ${fecha}</small>
-    `;
+   nuevaTarea.innerHTML = `
+    <strong>📚 ${materia}</strong>
 
+    <p style="margin:5px 0;">
+        📝 ${tarea}
+    </p>
+
+    <small>📅 ${fecha}</small>
+
+    <br>
+
+    <button onclick="this.parentElement.remove()" style="
+        margin-top:10px;
+        padding:7px 12px;
+        border:none;
+        border-radius:8px;
+        background:#e74c3c;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        🗑️ Eliminar
+    </button>
+`;
     lista.appendChild(nuevaTarea);
 
     document.getElementById("tareaPlanificador").value = "";
