@@ -1321,33 +1321,6 @@ window.iniciarPomodoro = function () {
     if (pomodoroIntervalo !== null) {
         return;
     }
-
-    function pausarPomodoro() {
-
-    if (pomodoroIntervalo !== null) {
-        clearInterval(pomodoroIntervalo);
-        pomodoroIntervalo = null;
-    }
-
-}
-
-
-function reiniciarPomodoro() {
-
-    if (pomodoroIntervalo !== null) {
-        clearInterval(pomodoroIntervalo);
-        pomodoroIntervalo = null;
-    }
-
-    pomodoroTiempo = 25 * 60;
-
-    let timer = document.getElementById("pomodoroTimer");
-
-    if (timer) {
-        timer.textContent = "25:00";
-    }
-
-}
     
     pomodoroIntervalo = setInterval(function () {
 
@@ -1381,6 +1354,33 @@ function reiniciarPomodoro() {
 
     }, 1000);
 };
+
+    function pausarPomodoro() {
+
+    if (pomodoroIntervalo !== null) {
+        clearInterval(pomodoroIntervalo);
+        pomodoroIntervalo = null;
+    }
+
+}
+
+
+function reiniciarPomodoro() {
+
+    if (pomodoroIntervalo !== null) {
+        clearInterval(pomodoroIntervalo);
+        pomodoroIntervalo = null;
+    }
+
+    pomodoroTiempo = 25 * 60;
+
+    let timer = document.getElementById("pomodoroTimer");
+
+    if (timer) {
+        timer.textContent = "25:00";
+    }
+
+},
 
     
     // ======================================================
