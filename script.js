@@ -1362,3 +1362,12 @@ window.iniciarPomodoro = function () {
 
     }, 1000);
 };
+
+window.pausarPomodoro = function () {
+
+    if (window.pomodoroIntervalo !== null) {
+        clearInterval(window.pomodoroIntervalo);
+        window.pomodoroIntervalo = null;
+    }
+
+};
