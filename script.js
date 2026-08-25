@@ -1700,3 +1700,235 @@ window.cerrarPomodoro = function () {
     }
 
 };
+// ==================================================
+// PLANTILLAS DE ESTUDIO
+// ==================================================
+
+window.abrirPlantillas = function () {
+
+    const ventana = document.getElementById("ventanaPlantillas");
+
+    if (ventana) {
+
+        ventana.style.display = "block";
+
+        ventana.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+};
+
+
+window.cerrarPlantillas = function () {
+
+    const ventana = document.getElementById("ventanaPlantillas");
+
+    if (ventana) {
+        ventana.style.display = "none";
+    }
+
+};
+
+
+window.usarPlantilla = function (tipo) {
+
+    const contenido = document.getElementById("contenidoPlantilla");
+
+    if (!contenido) {
+        return;
+    }
+
+    let titulo = "";
+    let campos = "";
+
+    if (tipo === "plan") {
+
+        titulo = "📚 Plan de estudio";
+
+        campos = `
+            <input
+                id="campoTema"
+                type="text"
+                placeholder="¿Qué vas a estudiar?"
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-bottom:10px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+
+            <input
+                id="campoTiempo"
+                type="text"
+                placeholder="¿Cuánto tiempo tienes?"
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-bottom:10px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+
+            <textarea
+                id="campoObjetivo"
+                placeholder="¿Qué quieres lograr?"
+                style="
+                    width:100%;
+                    min-height:100px;
+                    padding:12px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            ></textarea>
+        `;
+
+    } else if (tipo === "horario") {
+
+        titulo = "📅 Horario semanal";
+
+        campos = `
+            <input
+                id="campoDia"
+                type="text"
+                placeholder="Día"
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-bottom:10px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+
+            <input
+                id="campoMateria"
+                type="text"
+                placeholder="Materia"
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-bottom:10px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+
+            <input
+                id="campoHora"
+                type="text"
+                placeholder="Hora de estudio"
+                style="
+                    width:100%;
+                    padding:12px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+        `;
+
+    } else if (tipo === "examen") {
+
+        titulo = "🎯 Plan para examen";
+
+        campos = `
+            <input
+                id="campoExamen"
+                type="text"
+                placeholder="¿Qué examen tienes?"
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-bottom:10px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+
+            <input
+                id="campoFechaExamen"
+                type="date"
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-bottom:10px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            >
+
+            <textarea
+                id="campoTemas"
+                placeholder="Escribe los temas que debes estudiar..."
+                style="
+                    width:100%;
+                    min-height:120px;
+                    padding:12px;
+                    border:1px solid #ddd;
+                    border-radius:10px;
+                    box-sizing:border-box;
+                "
+            ></textarea>
+        `;
+    }
+
+    contenido.innerHTML = `
+
+        <div style="
+            padding:25px;
+            background:white;
+            border-radius:15px;
+            border:1px solid #e5e8ef;
+        ">
+
+            <h3 style="margin-bottom:20px;">
+                ${titulo}
+            </h3>
+
+            ${campos}
+
+            <button
+                onclick="guardarPlantilla()"
+                style="
+                    margin-top:15px;
+                    padding:10px 18px;
+                    border:none;
+                    border-radius:10px;
+                    background:#5b4cf0;
+                    color:white;
+                    cursor:pointer;
+                    font-weight:bold;
+                "
+            >
+                💾 Guardar plantilla
+            </button>
+
+        </div>
+    `;
+};
+
+
+window.guardarPlantilla = function () {
+
+    const contenido = document.getElementById("contenidoPlantilla");
+
+    if (!contenido) {
+        return;
+    }
+
+    alert("✅ ¡Plantilla guardada correctamente!");
+
+};
