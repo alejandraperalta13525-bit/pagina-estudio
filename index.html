@@ -758,7 +758,92 @@ z<!DOCTYPE html>
             </div>
 
         </section>
+<!-- ======================================
+     PLANIFICADOR
+     ====================================== -->
 
+<div id="ventanaPlanificador" style="
+    display:none;
+    max-width:900px;
+    margin:30px auto;
+    padding:30px;
+    background:white;
+    border-radius:20px;
+    border:1px solid #e5e8ef;
+    box-shadow:0 15px 35px rgba(40,45,80,0.08);
+">
+
+    <h2 style="margin-bottom:20px;">
+        📅 Mi planificador
+    </h2>
+
+    <input
+        type="text"
+        id="tareaPlanificador"
+        placeholder="¿Qué tienes que estudiar?"
+        style="
+            width:100%;
+            padding:12px;
+            margin-bottom:10px;
+            border:1px solid #ddd;
+            border-radius:10px;
+        "
+    >
+
+    <input
+        type="text"
+        id="materiaPlanificador"
+        placeholder="Materia"
+        style="
+            width:100%;
+            padding:12px;
+            margin-bottom:10px;
+            border:1px solid #ddd;
+            border-radius:10px;
+        "
+    >
+
+    <input
+        type="date"
+        id="fechaPlanificador"
+        style="
+            padding:12px;
+            margin-bottom:15px;
+            border:1px solid #ddd;
+            border-radius:10px;
+        "
+    >
+
+    <br>
+
+    <button onclick="agregarTareaPlanificador()" style="
+        padding:10px 18px;
+        border:none;
+        border-radius:10px;
+        background:#5b4cf0;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        ➕ Agregar tarea
+    </button>
+
+    <button onclick="cerrarPlanificador()" style="
+        padding:10px 18px;
+        margin-left:8px;
+        border:none;
+        border-radius:10px;
+        background:#777;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        ✕ Cerrar
+    </button>
+
+    <div id="listaPlanificador" style="margin-top:25px;"></div>
+
+</div>
 
         <!-- ======================================
              PREMIUM
