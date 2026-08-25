@@ -1322,6 +1322,33 @@ window.iniciarPomodoro = function () {
         return;
     }
 
+    function pausarPomodoro() {
+
+    if (pomodoroIntervalo !== null) {
+        clearInterval(pomodoroIntervalo);
+        pomodoroIntervalo = null;
+    }
+
+}
+
+
+function reiniciarPomodoro() {
+
+    if (pomodoroIntervalo !== null) {
+        clearInterval(pomodoroIntervalo);
+        pomodoroIntervalo = null;
+    }
+
+    pomodoroTiempo = 25 * 60;
+
+    let timer = document.getElementById("pomodoroTimer");
+
+    if (timer) {
+        timer.textContent = "25:00";
+    }
+
+}
+    
     pomodoroIntervalo = setInterval(function () {
 
         let minutos = Math.floor(pomodoroTiempo / 60);
