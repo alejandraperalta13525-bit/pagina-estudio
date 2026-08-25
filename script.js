@@ -1054,7 +1054,7 @@ ${tecnica.nombre === "Pomodoro" ? `
         🍅 Iniciar Pomodoro
     </button>
 
-<button <button onclick="alert('Pausa funciona')" style="
+<button <button onclick="pausarPomodoro()" style="
     margin-top:10px;
     margin-left:5px;
     padding:10px 18px;
@@ -1366,8 +1366,11 @@ window.iniciarPomodoro = function () {
 window.pausarPomodoro = function () {
 
     if (window.pomodoroIntervalo !== null) {
+
         clearInterval(window.pomodoroIntervalo);
+
         window.pomodoroIntervalo = null;
+
     }
 
 };
