@@ -1041,7 +1041,7 @@ else {
 </p>
 
 ${tecnica.nombre === "Pomodoro" ? `
-    <button onclick="alert('Pomodoro funciona')" style="
+    <button onclick="iniciarPomodoro()" style="
         margin-top:15px;
         padding:10px 18px;
         border:none;
