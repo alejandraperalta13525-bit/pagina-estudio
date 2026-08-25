@@ -1392,3 +1392,72 @@ window.reiniciarPomodoro = function () {
         timer.textContent = "25:00";
     }
 };
+// ==================================================
+// PLANIFICADOR
+// ==================================================
+
+window.abrirPlanificador = function () {
+
+    const ventana = document.getElementById("ventanaPlanificador");
+
+    if (ventana) {
+        ventana.style.display = "block";
+
+        ventana.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+};
+
+
+window.cerrarPlanificador = function () {
+
+    const ventana = document.getElementById("ventanaPlanificador");
+
+    if (ventana) {
+        ventana.style.display = "none";
+    }
+
+};
+
+
+window.agregarTareaPlanificador = function () {
+
+    const tarea = document.getElementById("tareaPlanificador").value.trim();
+    const materia = document.getElementById("materiaPlanificador").value.trim();
+    const fecha = document.getElementById("fechaPlanificador").value;
+
+    if (!tarea || !materia || !fecha) {
+
+        alert("Completa todos los campos.");
+
+        return;
+    }
+
+    const lista = document.getElementById("listaPlanificador");
+
+    const nuevaTarea = document.createElement("div");
+
+    nuevaTarea.style.cssText = `
+        background:#f7f7ff;
+        padding:15px;
+        margin-bottom:10px;
+        border-radius:12px;
+        border:1px solid #e5e8ef;
+    `;
+
+    nuevaTarea.innerHTML = `
+        <strong>📚 ${materia}</strong>
+        <p style="margin:5px 0;">📝 ${tarea}</p>
+        <small>📅 ${fecha}</small>
+    `;
+
+    lista.appendChild(nuevaTarea);
+
+    document.getElementById("tareaPlanificador").value = "";
+    document.getElementById("materiaPlanificador").value = "";
+    document.getElementById("fechaPlanificador").value = "";
+
+};
