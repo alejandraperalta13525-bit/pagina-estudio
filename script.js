@@ -1279,7 +1279,53 @@ ${tecnica.nombre === "Pomodoro" ? `
 
     }
 
+// ==================================================
+// TEMPORIZADOR POMODORO
+// ==================================================
 
+let pomodoroTiempo = 25 * 60;
+let pomodoroIntervalo = null;
+
+window.iniciarPomodoro = function () {
+
+    if (pomodoroIntervalo !== null) {
+        return;
+    }
+
+    pomodoroIntervalo = setInterval(function () {
+
+        let minutos = Math.floor(pomodoroTiempo / 60);
+        let segundos = pomodoroTiempo % 60;
+
+        let timer = document.getElementById("pomodoroTimer");
+
+        if (timer) {
+            timer.textContent =
+                String(minutos).padStart(2, "0") +
+                ":" +
+                String(segundos).padStart(2, "0");
+        }
+
+        if (pomodoroTiempo <= 0) {
+
+            clearInterval(pomodoroIntervalo);
+            pomodoroIntervalo = null;
+
+            alert("🍅 ¡Terminaste los 25 minutos! Ahora puedes descansar 5 minutos.");
+
+            pomodoroTiempo = 25 * 60;
+
+            if (timer) {
+                timer.textContent = "25:00";
+            }
+        }
+
+        pomodoroTiempo--;
+
+    }, 1000);
+};
+
+    
     // ======================================================
     // INICIAR
     // ======================================================
