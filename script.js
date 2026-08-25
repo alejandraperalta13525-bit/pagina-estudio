@@ -1932,3 +1932,34 @@ window.guardarPlantilla = function () {
     alert("✅ ¡Plantilla guardada correctamente!");
 
 };
+// ==================================================
+// GUÍAS DE ESTUDIO
+// ==================================================
+
+window.abrirGuias = function () {
+
+    const ventana = document.getElementById("ventanaGuias");
+
+    if (ventana) {
+
+        ventana.style.display = "block";
+
+        ventana.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+};
+
+
+window.cerrarGuias = function () {
+
+    const ventana = document.getElementById("ventanaGuias");
+
+    if (ventana) {
+        ventana.style.display = "none";
+    }
+
+};
