@@ -1054,7 +1054,7 @@ ${tecnica.nombre === "Pomodoro" ? `
         🍅 Iniciar Pomodoro
     </button>
 
-<button onclick="pausarPomodoro()" style="
+<button <button onclick="alert('Pausa funciona')" style="
     margin-top:10px;
     margin-left:5px;
     padding:10px 18px;
