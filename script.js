@@ -1288,6 +1288,8 @@ let pomodoroIntervalo = null;
 
 window.iniciarPomodoro = function () {
 
+    console.log("Pomodoro iniciado");
+    
     if (pomodoroIntervalo !== null) {
         return;
     }
