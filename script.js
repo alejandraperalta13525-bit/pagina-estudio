@@ -1380,7 +1380,7 @@ function reiniciarPomodoro() {
         timer.textContent = "25:00";
     }
 
-},
+}
 
     
     // ======================================================
