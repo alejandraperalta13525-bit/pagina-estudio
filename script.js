@@ -1668,3 +1668,35 @@ window.agregarResumen = function () {
     document.getElementById("contenidoResumen").value = "";
 
 };
+
+// ==================================================
+// ABRIR POMODORO DESDE RECURSOS
+// ==================================================
+
+window.abrirPomodoro = function () {
+
+    const ventana = document.getElementById("ventanaPomodoro");
+
+    if (ventana) {
+
+        ventana.style.display = "block";
+
+        ventana.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+};
+
+
+window.cerrarPomodoro = function () {
+
+    const ventana = document.getElementById("ventanaPomodoro");
+
+    if (ventana) {
+        ventana.style.display = "none";
+    }
+
+};
