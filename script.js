@@ -1479,3 +1479,96 @@ window.agregarTareaPlanificador = function () {
     document.getElementById("fechaPlanificador").value = "";
 
 };
+// ==================================================
+// FLASHCARDS
+// ==================================================
+
+window.abrirFlashcards = function () {
+
+    const ventana = document.getElementById("ventanaFlashcards");
+
+    if (ventana) {
+
+        ventana.style.display = "block";
+
+        ventana.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+};
+
+
+window.cerrarFlashcards = function () {
+
+    const ventana = document.getElementById("ventanaFlashcards");
+
+    if (ventana) {
+        ventana.style.display = "none";
+    }
+
+};
+
+
+window.agregarFlashcard = function () {
+
+    const pregunta = document
+        .getElementById("preguntaFlashcard")
+        .value
+        .trim();
+
+    const respuesta = document
+        .getElementById("respuestaFlashcard")
+        .value
+        .trim();
+
+    if (!pregunta || !respuesta) {
+
+        alert("Completa la pregunta y la respuesta.");
+
+        return;
+    }
+
+    const lista = document.getElementById("listaFlashcards");
+
+    const tarjeta = document.createElement("div");
+
+    tarjeta.style.cssText = `
+        background:#f7f7ff;
+        padding:20px;
+        margin-bottom:12px;
+        border-radius:15px;
+        border:1px solid #e5e8ef;
+    `;
+
+    tarjeta.innerHTML = `
+        <strong>❓ ${pregunta}</strong>
+
+        <p style="
+            margin-top:10px;
+            color:#555;
+        ">
+            💡 ${respuesta}
+        </p>
+
+        <button onclick="this.parentElement.remove()" style="
+            padding:7px 12px;
+            border:none;
+            border-radius:8px;
+            background:#e74c3c;
+            color:white;
+            cursor:pointer;
+            font-weight:bold;
+        ">
+            🗑️ Eliminar
+        </button>
+    `;
+
+    lista.appendChild(tarjeta);
+
+    document.getElementById("preguntaFlashcard").value = "";
+    document.getElementById("respuestaFlashcard").value = "";
+
+};
