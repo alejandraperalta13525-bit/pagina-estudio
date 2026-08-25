@@ -1036,13 +1036,33 @@ else {
                         ${tecnica.nombre}
                     </h3>
 
-                    <p>
-                        ${tecnica.descripcion}
-                    </p>
+                   <p>
+    ${tecnica.descripcion}
+</p>
 
-                </div>
+${tecnica.nombre === "Pomodoro" ? `
+    <button onclick="iniciarPomodoro()" style="
+        margin-top:15px;
+        padding:10px 18px;
+        border:none;
+        border-radius:10px;
+        background:#e85d04;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        🍅 Iniciar Pomodoro
+    </button>
 
-            `;
+    <div id="pomodoroTimer" style="
+        margin-top:15px;
+        font-size:28px;
+        font-weight:bold;
+    ">
+        25:00
+    </div>
+` : ""}
+        `;
 
         });
 
