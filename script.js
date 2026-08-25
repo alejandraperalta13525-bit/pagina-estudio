@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         ciencias: [
             {
-                nombre: "Método Feynman",
+                nombre: "Explicación Feynman",
                 icono: "💡",
                 descripcion: "Explica el concepto con palabras sencillas como si se lo enseñaras a otra persona.",
                comoHacerlo: [
