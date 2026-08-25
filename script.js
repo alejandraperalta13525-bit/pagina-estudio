@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         comunicacion: [
             {
-                nombre: "Método Feynman",
+                nombre: "Explicación Feynman",
                 icono: "💡",
                 descripcion: "Explica el contenido con tus propias palabras para comprobar si realmente lo entiendes.",
                comoHacerlo: [
@@ -485,7 +485,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ideal: ["examen", "tarea", "comprender"]
             },
             {
-                nombre: "Método Feynman",
+                nombre: "Explicación Feynman",
                 icono: "💡",
                 descripcion: "Explica el contenido con palabras sencillas para descubrir qué partes todavía no comprendes.",
                 comoHacerlo: [
@@ -698,7 +698,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (dificultad === "dificil") {
 
                 if (
-                    tecnica.nombre === "Método Feynman" ||
+                    tecnica.nombre === "Explicación Feynman" ||
                     tecnica.nombre === "Recuperación activa" ||
                     tecnica.nombre === "Práctica activa"
                 ) {
@@ -722,7 +722,7 @@ if (tiempo === "20" || tiempo === "30") {
     }
 
     if (
-        tecnica.nombre === "Método Feynman" ||
+        tecnica.nombre === "Explicación Feynman" ||
         tecnica.nombre === "Práctica intercalada"
     ) {
         puntuacion -= 1;
@@ -736,7 +736,7 @@ if (tiempo === "60") {
     if (
         tecnica.nombre === "Recuperación activa" ||
         tecnica.nombre === "Práctica activa" ||
-        tecnica.nombre === "Método Feynman" ||
+        tecnica.nombre === "Explicación Feynman" ||
         tecnica.nombre === "Mapas conceptuales"
     ) {
         puntuacion += 3;
@@ -748,7 +748,7 @@ if (tiempo === "120") {
 
     // Para sesiones largas: técnicas que permiten profundizar
     if (
-        tecnica.nombre === "Método Feynman" ||
+        tecnica.nombre === "Explicación Feynman" ||
         tecnica.nombre === "Mapas conceptuales" ||
         tecnica.nombre === "Práctica intercalada"
     ) {
@@ -788,11 +788,11 @@ let prioridadesObjetivo = {
         "Práctica activa",
         "Preguntas de análisis",
         "Resumen activo",
-        "Método Feynman"
+        "Explicación Feynman"
     ],
 
     comprender: [
-        "Método Feynman",
+        "Explicación Feynman",
         "Resolución paso a paso",
         "Mapa conceptual",
         "Mapas conceptuales",
@@ -811,7 +811,7 @@ let prioridadesObjetivo = {
     proyecto: [
         "Organización por bloques",
         "Práctica activa",
-        "Método Feynman",
+        "Explicación Feynman",
         "Mapa conceptual",
         "Mapas conceptuales",
         "Resumen activo"
@@ -863,11 +863,11 @@ let prioridades = {
         "Práctica activa",
         "Preguntas de análisis",
         "Resumen activo",
-        "Método Feynman"
+        "Explicación Feynman"
     ],
 
     comprender: [
-        "Método Feynman",
+        "Explicación Feynman",
         "Resolución paso a paso",
         "Mapa conceptual",
         "Mapas conceptuales",
@@ -885,7 +885,7 @@ let prioridades = {
 
     proyecto: [
         "Práctica activa",
-        "Método Feynman",
+        "Explicación Feynman",
         "Mapa conceptual",
         "Mapas conceptuales",
         "Resumen activo",
@@ -1250,7 +1250,7 @@ else {
         const nombres = {
 
             facil: "Fácil",
-            medio: "Regular",
+            medio: "Medio",
             dificil: "Difícil"
 
         };
