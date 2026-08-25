@@ -683,14 +683,15 @@ footer small {
    ========================================= */
 
 .planes {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+    gap: 35px;
 
+    align-items: start;
+}
 .plan {
     padding: 30px;
 
