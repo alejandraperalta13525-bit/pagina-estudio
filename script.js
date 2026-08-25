@@ -1054,6 +1054,34 @@ ${tecnica.nombre === "Pomodoro" ? `
         🍅 Iniciar Pomodoro
     </button>
 
+<button onclick="pausarPomodoro()" style="
+    margin-top:10px;
+    margin-left:5px;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#777;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+">
+    ⏸ Pausar
+</button>
+
+<button onclick="reiniciarPomodoro()" style="
+    margin-top:10px;
+    margin-left:5px;
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#555;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+">
+    ↻ Reiniciar
+</button>
+
     <div id="pomodoroTimer" style="
         margin-top:15px;
         font-size:28px;
