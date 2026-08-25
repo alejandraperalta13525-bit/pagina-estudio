@@ -1572,3 +1572,99 @@ window.agregarFlashcard = function () {
     document.getElementById("respuestaFlashcard").value = "";
 
 };
+// ==================================================
+// RESÚMENES
+// ==================================================
+
+window.abrirResumen = function () {
+
+    const ventana = document.getElementById("ventanaResumen");
+
+    if (ventana) {
+
+        ventana.style.display = "block";
+
+        ventana.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+};
+
+
+window.cerrarResumen = function () {
+
+    const ventana = document.getElementById("ventanaResumen");
+
+    if (ventana) {
+        ventana.style.display = "none";
+    }
+
+};
+
+
+window.agregarResumen = function () {
+
+    const titulo = document
+        .getElementById("tituloResumen")
+        .value
+        .trim();
+
+    const contenido = document
+        .getElementById("contenidoResumen")
+        .value
+        .trim();
+
+    if (!titulo || !contenido) {
+
+        alert("Completa el título y el contenido del resumen.");
+
+        return;
+    }
+
+    const lista = document.getElementById("listaResumenes");
+
+    const resumen = document.createElement("div");
+
+    resumen.style.cssText = `
+        background:#f7f7ff;
+        padding:20px;
+        margin-bottom:12px;
+        border-radius:15px;
+        border:1px solid #e5e8ef;
+    `;
+
+    resumen.innerHTML = `
+        <h3 style="margin-bottom:10px;">
+            📝 ${titulo}
+        </h3>
+
+        <p style="
+            color:#555;
+            white-space:pre-wrap;
+            line-height:1.6;
+        ">
+            ${contenido}
+        </p>
+
+        <button onclick="this.parentElement.remove()" style="
+            padding:7px 12px;
+            border:none;
+            border-radius:8px;
+            background:#e74c3c;
+            color:white;
+            cursor:pointer;
+            font-weight:bold;
+        ">
+            🗑️ Eliminar
+        </button>
+    `;
+
+    lista.appendChild(resumen);
+
+    document.getElementById("tituloResumen").value = "";
+    document.getElementById("contenidoResumen").value = "";
+
+};
