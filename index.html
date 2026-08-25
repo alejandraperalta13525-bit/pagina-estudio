@@ -1001,6 +1001,89 @@ z<!DOCTYPE html>
     "></div>
 
 </div>
+
+        <!-- ======================================
+     POMODORO
+     ====================================== -->
+
+<div id="ventanaPomodoro" style="
+    display:none;
+    max-width:900px;
+    margin:30px auto;
+    padding:30px;
+    background:white;
+    border-radius:20px;
+    border:1px solid #e5e8ef;
+    box-shadow:0 15px 35px rgba(40,45,80,0.08);
+    text-align:center;
+">
+
+    <h2 style="margin-bottom:20px;">
+        🍅 Pomodoro
+    </h2>
+
+    <div id="pomodoroTimer" style="
+        font-size:60px;
+        font-weight:bold;
+        margin:25px 0;
+        color:#5b4cf0;
+    ">
+        25:00
+    </div>
+
+    <button onclick="iniciarPomodoro()" style="
+        padding:10px 18px;
+        border:none;
+        border-radius:10px;
+        background:#e85d04;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        🍅 Iniciar
+    </button>
+
+    <button onclick="pausarPomodoro()" style="
+        margin-left:5px;
+        padding:10px 18px;
+        border:none;
+        border-radius:10px;
+        background:#777;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        ⏸ Pausar
+    </button>
+
+    <button onclick="reiniciarPomodoro()" style="
+        margin-left:5px;
+        padding:10px 18px;
+        border:none;
+        border-radius:10px;
+        background:#555;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+        ↻ Reiniciar
+    </button>
+
+    <br><br>
+
+    <button onclick="cerrarPomodoro()" style="
+        padding:9px 16px;
+        border:none;
+        border-radius:10px;
+        background:#777;
+        color:white;
+        cursor:pointer;
+    ">
+        ✕ Cerrar
+    </button>
+
+</div>
+        
         <!-- ======================================
              PREMIUM
              ====================================== -->
