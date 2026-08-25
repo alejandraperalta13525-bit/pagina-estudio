@@ -1374,3 +1374,21 @@ window.pausarPomodoro = function () {
     }
 
 };
+window.reiniciarPomodoro = function () {
+
+    // Detener el temporizador si está funcionando
+    if (window.pomodoroIntervalo !== null) {
+        clearInterval(window.pomodoroIntervalo);
+        window.pomodoroIntervalo = null;
+    }
+
+    // Volver a 25 minutos
+    window.pomodoroTiempo = 25 * 60;
+
+    // Mostrar 25:00 en pantalla
+    let timer = document.getElementById("pomodoroTimer");
+
+    if (timer) {
+        timer.textContent = "25:00";
+    }
+};
